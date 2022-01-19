@@ -8,6 +8,7 @@
   <title>CodeUps</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
+  <meta name=”robots” content=”noindex”>
   <!-- ogp -->
   <meta property="og:title" content="" />
   <meta property="og:type" content="" />
@@ -17,15 +18,102 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 <body>
-  <div class="inner">
-  <p class="test">変更のテスト</p>
-</div>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__title">
+        <a href="#" class="header__logo">
+          <img src="./images/common/codeups.svg" alt="codeups">
+        </a><!-- /.header__logo -->
+      </h1><!-- /.header__title -->
+      <!--ナビゲーション-->
+      <nav class="header__nav">
+        <ul class="header__lists">
+          <li class="header__list"><a class="header__link" href="#">お知らせ</a></li>
+          <li class="header__list"><a class="header__link" href="#">事業内容</a></li>
+          <li class="header__list"><a class="header__link" href="#">制作実績</a></li>
+          <li class="header__list"><a class="header__link" href="#">企業概要</a></li>
+          <li class="header__list"><a class="header__link" href="#">ブログ</a></li>
+          <li class="header__list header__list-white"><a class="header__link" href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <!--hamburgerボタンー-->
+      <div class="header__btn js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!--hamburgerメニュー-->
+      <nav class="header__sp-nav js-hamburger-nav">
+        <ul class="header__sp-lists">
+          <li class="header__sp-list">
+            <a class="header__sp-link" href="#">トップ</a>
+          </li>
+          <li class="header__sp-list">
+            <a class="header__sp-link" href="#">お知らせ</a>
+          </li>
+          <li class="header__sp-list">
+            <a class="header__sp-link" href="#">事業内容</a>
+          </li>
+          <li class="header__sp-list">
+            <a class="header__sp-link" href="#">制作実績</a>
+          </li>
+          <li class="header__sp-list">
+            <a class="header__sp-link" href="#">企業概要</a>
+          </li>
+          <li class="header__sp-list">
+            <a class="header__sp-link" href="#">ブログ</a>
+          </li>
+          <li class="header__sp-list">
+            <a class="header__sp-link" href="#">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <!--//ここまでナビゲーション-->
+    </div><!-- /.header__inner -->
+  </header>
+  <main>
+    <div class="main-view">
+      <div class="main-view__wrap">
+        <h2 class="main-view__title">メインタイトルが入ります<br>
+        <span class="main-view__subtitle">サブタイトルが入ります</span></h2><!-- /.main-view__title -->
+        <div class="swiper swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img class="u-mobile" src="./images/common/sp-main-view1.jpg" alt="main-view1">
+                <img class="u-desktop" src="./images/common/main-view1.jpg" alt="main-view1">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img class="u-mobile" src="./images/common/sp-main-view2.jpg" alt="main-view2">
+                <img class="u-desktop" src="./images/common/main-view2.jpg" alt="main-view2">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img class="u-mobile" src="./images/common/sp-main-view3.jpg" alt="main-view3">
+                <img class="u-desktop" src="./images/common/main-view3.jpg" alt="main-view3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.main-view -->
+
+  </main>
 </body>
 </html>

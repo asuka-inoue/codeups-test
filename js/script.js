@@ -23,15 +23,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
-
-  });
+  
+    //ハンバーガーメニュー
+    $(".js-hamburger").click(function () {
+      $(this).toggleClass("is-active");
+  
+      if ($(this).hasClass("is-active")) {
+        $(".js-hamburger-nav").addClass("is-active");
+      } else {
+        $(".js-hamburger-nav").removeClass("is-active");
+      }
+    });
+    $(".header__sp-link").click(function () {
+      $(".js-hamburger-nav,.js-hamburger").removeClass("is-active");
+    });
+  
+    //ヘッダー固定(SP)
+    //fvを超えたらスクロールでheaderに色を付ける
+    var mainPos = $(".fv").height();
+  
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > mainPos) {
+        $(".header__inner").addClass("addColor");
+      } else {
+        $(".header__inner").removeClass("addColor");
+      }
+    });
+  
 
 
 
@@ -47,4 +65,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
+  // swiper1
+  let swipeOption = {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  }
+  new Swiper('.swiper1', swipeOption);
+
 });
+

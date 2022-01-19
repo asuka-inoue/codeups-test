@@ -1,0 +1,157 @@
+@use "global" as *;
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: rem(50);
+  background: rgba($black, 0.5);
+  border: 1px solid #000;
+  z-index: 10;
+}
+.header__inner {
+  width: 100%;
+  height: inherit;
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title{
+  position: relative;
+  width: 100%;
+  max-width: rem(70);
+  z-index: 20;
+}
+.header__nav{
+  display: none;
+  @include mq(md){
+    display: block;
+    height: inherit;
+  }
+}
+.header__lists{
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+.header__list + .header__list{
+  margin-left: rem(32);
+}
+.header__link{
+  position: relative;
+  color: $white;
+}
+.header__link::after{
+  content: "";
+  position: absolute;
+  bottom: rem(-4);
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  background: #FFEA2E;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+.header__link:hover{
+  &::after{
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+.header__list-white{
+  background: $white;
+  height: inherit;
+}
+.header__list-white .header__link{
+  color: $black;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.header__btn{
+  position: relative;
+  width: rem(24);
+  height: rem(14);
+  z-index: 20;
+  @include mq(md){
+    display: none;
+  }
+}
+.header__btn span{
+  display: block;
+  width: 100%;
+  height: rem(2);
+  border-radius: rem(5);
+  background-color: $white;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.header__btn span:nth-child(1) {
+  top: 0;
+}
+.header__btn span:nth-child(2){
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  }
+.header__btn span:nth-child(3) {
+  bottom: 0;
+  }
+
+//タップ後のハンバーガー
+
+.header__btn.is-active span:nth-child(1) { 
+  transform: translateY(rem(6)) rotate(-45deg);
+  }
+.header__btn.is-active span:nth-child(2) {
+  opacity: 0;
+  }
+.header__btn.is-active span:nth-child(3) {
+  transform: translateY(rem(-6)) rotate(45deg);
+  }
+
+//スライドメニュー
+.header__sp-nav {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100vw);
+  transition: all .3s;
+  background-color: $black;
+  @include mq(md) {
+    display: none;
+  }
+}
+.header__sp-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+.header__sp-list {
+  font-size: rem(16);
+  list-style: none;
+  text-align: center;
+}
+.header__sp-list + .header__sp-list {
+  padding-top: rem(32);
+}
+.header__sp-link {
+  text-decoration: none;
+  color: $white;
+}
+//activeクラスをつけたら、スライドイン
+.header__sp-nav.is-active {
+  transform: translateX(0);
+}

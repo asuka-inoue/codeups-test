@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.main-view{
+  height: 100vh;
+}
+.main-view__wrap{
+  position: relative;
+  height: 100vh;
+}
+.main-view__title{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 rem(16);
+  color: $white;
+  font-size: rem(28);
+  font-weight: $bold;
+  text-align: center;
+  line-height: 1;
+  z-index: 2;
+  @include mq(md){
+    font-size: rem(50);
+  }
+}
+.main-view__title span{
+  display: block;
+  font-size: rem(20);
+  padding-top: rem(24);
+  @include mq(md){
+    font-size: rem(25);
+  }
+}
