@@ -65,10 +65,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-  // swiper1
-  let swipeOption = {
+let swipeOption = {
     loop: true,
     effect: 'fade',
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
+  }
+  
+  let swiper1 = new Swiper('.swiper1', swipeOption);
+
+// swiper2
+  let swiper2 = new Swiper('.swiper2', {
+    loop: true,
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -77,9 +88,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    }
-  }
-  new Swiper('.swiper1', swipeOption);
+    },
+  });
 
 });
-

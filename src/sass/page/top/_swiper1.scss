@@ -1,12 +1,16 @@
-.swiper-slide-active .slide-img,
+.swiper1{
+  .swiper-slide-active .slide-img,
 .swiper-slide-duplicate-active .slide-img,
 .swiper-slide-prev .slide-img{
   animation: zoomUp 10s linear 0s 1 normal both;  
 }
-// .slide-img img{
-//   display: block;
-// }
-
+}
+.swiper1{
+  height: 100%;
+  span.swiper-pagination-bullet{
+    display: none;
+  }
+}
 @keyframes zoomUp {
   0% {
     transform: scale(1);

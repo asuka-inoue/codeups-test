@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.news__contents{
+  padding-top: rem(24);
+}
+.news__inner{
+  @include mq(md){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(54);
+  }
+}
+.news__title {
+  padding-top: rem(16);
+  @include mq(md){
+    padding-top: initial;
+  }
+}
+.news__link {
+  color: $white;
+  font-weight: $regular;
+  font-size: rem(16);
+  @include mq(md){
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.news__btn {
+  margin-top: rem(28);
+  @include mq(md){
+    max-width: rem(134);
+    margin-top: initial;
+    font-size: rem(16);
+    background: $white;
+    color: #000;
+    border: initial;
+    padding: rem(3) 0;
+    &:hover{
+      color: $white;
+    }
+  }
+}
+.news__btn::before {
+  background-color: $text-color;
+}

@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.swiper2{
+  position: relative;
+  margin-top: rem(48);
+  background: $text-color;
+  .swiper-wrapper{
+    padding-bottom: rem(24);
+  }
+  .swiper-pagination{
+  position: absolute;
+  top: initial;
+  bottom: rem(3);
+}
+}
+
+span.swiper-pagination-bullet{
+  background: #C4C4C4;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: $ac-color;
+}

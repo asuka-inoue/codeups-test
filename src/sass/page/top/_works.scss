@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.works__inner {
+  margin-top: rem(70);
+}
+
+.works__content {
+  background: $text-color;
+  padding: 0 $padding-sp $padding-sp;
+}
+
+.works__title {
+  color: $white;
+  font-size: rem(20);
+  font-weight: $regular;
+  text-align: center
+}
+
+.works__textblock{
+  margin-top: rem(24);
+}
+
+.works__text {
+  color: $white;
+}
+
+.works__btn{
+  margin-top: rem(16);
+}
