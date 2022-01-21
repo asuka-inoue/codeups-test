@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.contact__inner {
+  margin-top: rem(120);
+  padding: $padding-sp $padding-sp rem(64);
+  background: $text-color;
+  @include mq(md){
+    margin-top: rem(150);
+    padding: rem(57) $padding-pc rem(150);
+  }
+}
+.contact__title{
+  .section-header__title{
+    @include mq(md){
+      margin-bottom: rem(-80);
+    }
+  }
+}
+.contact__body{
+  margin-top: rem(20);
+  @include mq(md){
+    margin-top: rem(24);
+    text-align: center;
+  }
+}
+.contact__text{
+  color: $white;
+  font-size: rem(16);
+  letter-spacing: 2px;
+}
+.contact__btn{
+  margin: rem(40) auto 0;
+  @include mq(md){
+    margin: rem(61) auto 0;
+  }
+}
+.contact__btn:hover {
+  color: $text-color;
+}
+.contact__btn::before {
+  background-color: $white;
+}

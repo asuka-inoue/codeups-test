@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .btn{
-  display: inline-block;
+  display: block;
   width: 100%;
   max-width: rem(335);
   padding: rem(10) 0;
@@ -12,11 +12,10 @@
   background: $text-color;
   color: $white;
   cursor: pointer;
-  @include mq(md){
-    position: relative;
+  position: relative;
     overflow: hidden;
     transition: ease .3s;
-  }
+    z-index: 1;
 }
 .btn::before {
   content: '';
@@ -30,6 +29,8 @@
   transition: 0.3s ease-in-out;
   z-index: -1;
 }
+
 .btn:hover::before{
   transform: translateX(0);
+  opacity: 1;
 }

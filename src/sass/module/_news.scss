@@ -28,10 +28,10 @@
   }
 }
 .news__btn {
-  margin-top: rem(28);
+  margin: rem(28) auto 0;
   @include mq(md){
     max-width: rem(134);
-    margin-top: initial;
+    margin: initial;
     font-size: rem(16);
     background: $white;
     color: #000;

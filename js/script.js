@@ -1,28 +1,29 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  var topBtn = $('.pagetop');
-  topBtn.hide();
-
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
-    }
-  });
-
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
-  });
-
+    var appear = false;
+    var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 70) {  
+        if (appear == false) {
+          appear = true;
+          pagetop.stop().animate({
+            'bottom': '40px' 
+          }, 300); 
+        }
+      } else {
+        if (appear) {
+          appear = false;
+          pagetop.stop().animate({
+            'bottom': '-200px' 
+          }, 300); 
+        }
+      }
+    });
+    pagetop.click(function () {
+      $('body, html').animate({ scrollTop: 0 }, 300); 
+      return false;
+    });
   
     //ハンバーガーメニュー
     $(".js-hamburger").click(function () {
@@ -38,20 +39,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".js-hamburger-nav,.js-hamburger").removeClass("is-active");
     });
   
-    //ヘッダー固定(SP)
-    //fvを超えたらスクロールでheaderに色を付ける
-    var mainPos = $(".fv").height();
+    //ヘッダー固定
+    var mainPos = $(".main-view").height();
   
     $(window).scroll(function () {
       if ($(window).scrollTop() > mainPos) {
-        $(".header__inner").addClass("addColor");
+        $(".header").addClass("addColor");
       } else {
-        $(".header__inner").removeClass("addColor");
+        $(".header").removeClass("addColor");
       }
     });
   
-
-
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
@@ -65,7 +63,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-let swipeOption = {
+  // swiper1
+  let swipeOption = {
     loop: true,
     effect: 'fade',
     autoplay: {
@@ -74,7 +73,6 @@ let swipeOption = {
     },
     speed: 2000,
   }
-  
   let swiper1 = new Swiper('.swiper1', swipeOption);
 
 // swiper2

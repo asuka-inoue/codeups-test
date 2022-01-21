@@ -1,14 +1,14 @@
 @use "global" as *;
 
-.post-head{
+.post-info{
   display: flex;
   align-items: center;
 }
 
-.post-head__date{
+.post-info__date{
   color: $white;
 }
-.post-head__category{
+.post-info__category{
   border: 1px solid $white;
   color: $white;
   margin-left: rem(32);

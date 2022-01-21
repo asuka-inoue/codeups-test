@@ -1,21 +1,43 @@
 @use "global" as *;
 
-.swiper2{
+.swiper2 {
   position: relative;
-  margin-top: rem(48);
   background: $text-color;
-  .swiper-wrapper{
+  .swiper-wrapper {
     padding-bottom: rem(24);
   }
-  .swiper-pagination{
-  position: absolute;
-  top: initial;
-  bottom: rem(3);
-}
+  .swiper-pagination {
+    position: absolute;
+    top: initial;
+    bottom: rem(3);
+  }
+  .slide-img{
+    position: relative;
+    padding-top: 69.6%;
+    overflow: hidden;
+  }
+  .slide-img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    object-fit: cover;
+  }
+  @include mq(md) {
+    max-width: rem(557);
+    width: 100%;
+    margin: initial;
+    padding: rem(80) 0;
+    background: linear-gradient(90deg, transparent 0%, transparent 50%, $text-color 50%, $text-color 100%);
+    .swiper-pagination{
+      bottom: rem(73);
+    }
+  }
 }
 
-span.swiper-pagination-bullet{
-  background: #C4C4C4;
+span.swiper-pagination-bullet {
+  background: #c4c4c4;
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: $ac-color;

@@ -13,6 +13,10 @@
     border: initial;
   }
 }
+.header.addColor{
+  background: $black;
+}
+
 .header__inner {
   width: 100%;
   height: inherit;
@@ -134,7 +138,7 @@
   }
 
 //スライドメニュー
-.header__sp-nav {
+.header__spnav {
   display: block;
   position: fixed;
   z-index: 10;
@@ -149,7 +153,7 @@
     display: none;
   }
 }
-.header__sp-lists {
+.header__splists {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,19 +162,19 @@
   height: 100vh;
   overflow: scroll;
 }
-.header__sp-list {
+.header__splist {
   font-size: rem(16);
   list-style: none;
   text-align: center;
 }
-.header__sp-list + .header__sp-list {
+.header__splist + .header__splist {
   padding-top: rem(32);
 }
-.header__sp-link {
+.header__splink {
   text-decoration: none;
   color: $white;
 }
 //activeクラスをつけたら、スライドイン
-.header__sp-nav.is-active {
+.header__spnav.is-active {
   transform: translateX(0);
 }

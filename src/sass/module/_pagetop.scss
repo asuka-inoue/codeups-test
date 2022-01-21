@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.pagetop{
+  width: rem(45);
+  height: rem(45);
+  background: $white;
+  position: fixed;
+  bottom: rem(-200);
+  right: rem(21);
+  @include mq(md){
+    right: rem(32);
+  }
+}
+
+.pagetop::before,
+.pagetop::after{
+  position: absolute;
+  content:'';
+  width: 15px;
+  height: 2px;
+  top: 50%;
+  border-radius: 30px;
+  background-color: $text-color;
+}
+.pagetop::before{
+    right: 45%;
+    transform: rotate(-45deg);
+  }
+.pagetop::after{    
+    left: 45%;
+    transform: rotate(45deg);
+  }
+  .pagetop:hover{
+    background: $text-color;
+  }
+  .pagetop:hover::before,
+  .pagetop:hover::after{
+    background: $white;
+  }
