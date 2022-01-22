@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.line__one {
+  position: relative;
+}
+
+.line__one::before {
+  position: absolute;
+  content: "";
+  height: 160%;
+  width: 100%;
+  background: linear-gradient(to bottom left, transparent 0%, transparent 50%, #f9f718 50%, #f9f718 50.1%, transparent 50.1%, transparent 100%);
+  z-index: -1;
+  @include mq(md) {
+    height: 250%;
+    max-height: rem(1212);
+    top: rem(-63);
+  }
+}
+
+.line__two {
+  position: relative;
+}
+
+.line__two::before {
+  position: absolute;
+  content: "";
+  height: 45%;
+  width: 100%;
+  top: rem(200);
+  background: linear-gradient(to bottom right, transparent 0%, transparent 50%, #f9f718 50%, #f9f718 50.1%, transparent 50.1%, transparent 100%);
+  z-index: -1;
+  @include mq(md) {
+    height: 58%;
+    top: rem(580);
+  }
+}

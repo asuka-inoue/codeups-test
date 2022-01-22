@@ -2,6 +2,9 @@
 
 .content__inner {
   margin-top: rem(100);
+  @include mq(md) {
+    margin-top: rem(150);
+  }
 }
 
 .content__wrapper {

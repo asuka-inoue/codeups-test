@@ -35,7 +35,28 @@
   @include mq(md){
     margin-left: rem(25);
   }
-  
+}
+
+.blog__content--new {
+  position: relative;
+}
+
+.blog__content--new::before {
+  position: absolute;
+  content: "new";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(16);
+  text-transform: capitalize;
+  width: rem(60);
+  height: rem(60);
+  top: rem(-16);
+  left: rem(-15);
+  border-radius: 50%;
+  background: #FFBA6A;
+  z-index: 1;
+
 }
 
 .blog__btn{
