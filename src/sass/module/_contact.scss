@@ -6,31 +6,48 @@
   background: $text-color;
   @include mq(md){
     margin-top: rem(150);
-    padding: rem(57) $padding-pc rem(150);
+    padding: rem(54) $padding-pc rem(149);
   }
 }
 .contact__title{
-  .section-header__title{
-    @include mq(md){
-      margin-bottom: rem(-80);
-    }
+  margin-top: rem(-2);
+  @include mq(md){
+    margin-top: initial;
+    margin-bottom: rem(-80);
+    padding-left: rem(65);
   }
 }
-.contact__body{
-  margin-top: rem(20);
+
+.contact__subtitle{
   @include mq(md){
-    margin-top: rem(24);
+    padding-top: rem(51);
+  }
+}
+
+.contact__body{
+  margin-top: rem(18);
+  @include mq(md){
+    margin-top: rem(18);
     text-align: center;
   }
 }
 .contact__text{
   color: $white;
   font-size: rem(16);
+  line-height: 1.448125;
   letter-spacing: 2px;
+  @include mq(md) {
+    font-size: rem(15);
+    letter-spacing: 1.4px;
+    padding-left: rem(2);
+  }
 }
 .contact__btn{
-  margin: rem(40) auto 0;
+  margin: rem(48) auto 0;
   @include mq(md){
+    font-size: rem(20);
+    max-width: rem(358);
+    padding: rem(19) 0;
     margin: rem(61) auto 0;
   }
 }

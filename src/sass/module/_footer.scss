@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .footer__inner{
-  padding: rem(48) 0;
+  padding: rem(50) 0;
   @include mq(md){
-    padding: rem(32);
+    padding: rem(35) rem(31) rem(35) rem(32);
   }
 }
 .footer__wrapper{
@@ -14,7 +14,7 @@
   }
 }
 .footer__title img{
-  max-width: rem(70);
+  max-width: rem(72);
   width: 100%;
   margin: auto;
 }
@@ -26,12 +26,17 @@
   }
 }
 .footer__link{
+  display: block;
   font-size: rem(16);
   color: $white;
+  letter-spacing: 1.2px;
+  line-height: 1.448125;
   margin-top: rem(8);
+  margin-left: rem(2);
   position: relative;
   @include mq(md){
-    margin-left: rem(32);
+    letter-spacing: 2px;
+    margin-left: rem(30);
     margin-top: initial;
   }
 }
@@ -59,8 +64,13 @@
   font-size: rem(11);
   text-align: center;
   color: $white;
-  margin-top: rem(32);
+  letter-spacing: 1.2px;
+  margin-top: rem(30);
+  margin-left: rem(4);
   @include mq(md){
-    margin-top: rem(75);
+    font-size: rem(15);
+    letter-spacing: 0.4px;
+    margin-top: rem(74);
+    padding-right: rem(4);
   }
 }

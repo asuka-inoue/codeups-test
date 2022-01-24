@@ -9,7 +9,7 @@
   right: rem(21);
   z-index: 20;
   @include mq(md){
-    right: rem(32);
+    right: rem(31);
   }
 }
 
@@ -17,7 +17,7 @@
 .pagetop::after{
   position: absolute;
   content:'';
-  width: 15px;
+  width: 18px;
   height: 2px;
   top: 50%;
   border-radius: 30px;

@@ -11,7 +11,6 @@
   @include mq(md){
     text-align: left;
     font-size: rem(110);
-    padding: 0 rem(90);
     margin-bottom: rem(-127);
   }
 }
@@ -21,7 +20,7 @@
   font-size: rem(20);
   display: block;
   text-align: center;
-  margin-top: rem(-25);
+  margin-top: rem(-26);
   letter-spacing: rem(2);
   @include mq(md){
     margin-top: initial;

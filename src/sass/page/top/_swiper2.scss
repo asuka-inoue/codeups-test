@@ -28,10 +28,11 @@
     max-width: rem(557);
     width: 100%;
     margin: initial;
-    padding: rem(80) 0;
-    background: linear-gradient(90deg, transparent 0%, transparent 50%, $text-color 50%, $text-color 100%);
+    padding: rem(80) 0 rem(58);
+    background: linear-gradient(90deg, transparent 0%, transparent 53%, $text-color 53%, $text-color 100%);
     .swiper-pagination{
-      bottom: rem(73);
+      left: rem(-22);
+      bottom: rem(49);
     }
   }
 }
@@ -41,4 +42,8 @@ span.swiper-pagination-bullet {
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: $ac-color;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,6px);
 }

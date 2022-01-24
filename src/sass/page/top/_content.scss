@@ -3,7 +3,20 @@
 .content__inner {
   margin-top: rem(100);
   @include mq(md) {
-    margin-top: rem(150);
+    margin-top: rem(147);
+  }
+}
+
+.content__title {
+  @include mq(md) {
+    padding-left: rem(90);
+  }
+}
+
+.content__subtitle {
+  @include mq(md) {
+    padding-top: rem(5);
+    margin-left: rem(2);
   }
 }
 
@@ -11,6 +24,9 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: rem(48);
+  @include mq(md) {
+    margin-top: rem(42);
+  }
 }
 
 .content__link {

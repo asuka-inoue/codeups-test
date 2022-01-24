@@ -8,7 +8,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         if (appear == false) {
           appear = true;
           pagetop.stop().animate({
-            'bottom': '40px' 
+            'bottom': '33px' 
           }, 300); 
         }
       } else {

@@ -7,13 +7,14 @@
 .line__one::before {
   position: absolute;
   content: "";
-  height: 160%;
+  height: 147%;
   width: 100%;
+  top: rem(17);
   background: linear-gradient(to bottom left, transparent 0%, transparent 50%, #f9f718 50%, #f9f718 50.1%, transparent 50.1%, transparent 100%);
   z-index: -1;
   @include mq(md) {
-    height: 250%;
-    max-height: rem(1212);
+    height: 284%;
+    max-height: rem(1280);
     top: rem(-63);
   }
 }
@@ -25,13 +26,13 @@
 .line__two::before {
   position: absolute;
   content: "";
-  height: 45%;
+  height: 46%;
   width: 100%;
-  top: rem(200);
+  top: rem(205);
   background: linear-gradient(to bottom right, transparent 0%, transparent 50%, #f9f718 50%, #f9f718 50.1%, transparent 50.1%, transparent 100%);
   z-index: -1;
   @include mq(md) {
-    height: 58%;
-    top: rem(580);
+    height: 55%;
+    top: rem(614);
   }
 }

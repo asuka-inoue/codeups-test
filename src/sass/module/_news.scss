@@ -1,7 +1,10 @@
 @use "global" as *;
 
 .news__contents{
-  padding-top: rem(24);
+  padding-top: rem(23);
+  @include mq(md) {
+    padding-top: rem(32);
+  }
 }
 .news__inner{
   @include mq(md){
@@ -12,9 +15,11 @@
   }
 }
 .news__title {
-  padding-top: rem(16);
+  padding-top: rem(13);
+  line-height: 1.3;
   @include mq(md){
     padding-top: initial;
+    margin-left: rem(13);
   }
 }
 .news__link {
@@ -33,10 +38,11 @@
     max-width: rem(134);
     margin: initial;
     font-size: rem(16);
+    letter-spacing: 0;
     background: $white;
     color: #000;
     border: initial;
-    padding: rem(3) 0;
+    padding: rem(7) 0;
     &:hover{
       color: $white;
     }
