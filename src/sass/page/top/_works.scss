@@ -94,7 +94,9 @@
 }
 
 .works__btn:hover {
-  color: $text-color;
+  @include mq(md) {
+    color: $text-color;
+  }
 }
 .works__btn::before {
   background-color: $white;

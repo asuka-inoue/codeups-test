@@ -24,17 +24,27 @@
   background-color: $text-color;
 }
 .pagetop::before{
-    right: 45%;
+    right: 43%;
     transform: rotate(-45deg);
+    @include mq(md) {
+      right: 42%;
+    }
   }
 .pagetop::after{    
-    left: 45%;
+    left: 43%;
     transform: rotate(45deg);
+    @include mq(md) {
+      left: 42%;
+    }
   }
   .pagetop:hover{
-    background: $text-color;
+    @include mq(md) {
+      background: $text-color;
+    }
   }
   .pagetop:hover::before,
   .pagetop:hover::after{
-    background: $white;
+    @include mq(md) {
+      background: $white;
+    }
   }

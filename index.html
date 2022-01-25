@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <!-- ファビコン -->
-  <link rel="”icon”" href="" />
+  <link rel="icon" href="data:," />
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,7 @@
           <li class="header__list"><a class="header__link" href="#content">事業内容</a></li>
           <li class="header__list"><a class="header__link" href="#works">制作実績</a></li>
           <li class="header__list"><a class="header__link" href="#overview">企業概要</a></li>
-          <li class="header__list"><a class="header__link" href="#blog">ブログ</a></li>
+          <li class="header__list"><a class="header__link" href="#top-blog">ブログ</a></li>
           <li class="header__list header__list--white"><a class="header__link" href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
@@ -59,25 +59,25 @@
       <nav class="header__spnav js-hamburger-nav">
         <ul class="header__splists">
           <li class="header__splist">
-            <a class="header__splink" href="#">トップ</a>
+            <a class="header__splink js-link" href="#">トップ</a>
           </li>
           <li class="header__splist">
-            <a class="header__splink" href="#news">お知らせ</a>
+            <a class="header__splink js-link" href="#news">お知らせ</a>
           </li>
           <li class="header__splist">
-            <a class="header__splink" href="#content">事業内容</a>
+            <a class="header__splink js-link" href="#content">事業内容</a>
           </li>
           <li class="header__splist">
-            <a class="header__splink" href="#works">制作実績</a>
+            <a class="header__splink js-link" href="#works">制作実績</a>
           </li>
           <li class="header__splist">
-            <a class="header__splink" href="#overview">企業概要</a>
+            <a class="header__splink js-link" href="#overview">企業概要</a>
           </li>
           <li class="header__splist">
-            <a class="header__splink" href="#blog">ブログ</a>
+            <a class="header__splink js-link" href="#top-blog">ブログ</a>
           </li>
           <li class="header__splist">
-            <a class="header__splink" href="#contact">お問い合わせ</a>
+            <a class="header__splink js-link" href="#contact">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -118,7 +118,7 @@
       <div class="news__contents">
         <div class="news__inner inner">
           <div class="news__info post-info">
-            <time class="post-info__date" datetime="2020.07-20">2020.07.20</time>
+            <time class="post-info__date" datetime="2020-07-20">2020.07.20</time>
             <p class="post-info__category">お知らせ</p>
           </div><!-- /.news__head -->
           <h3 class="news__title">
@@ -231,14 +231,14 @@
       </div><!-- /.overview__inner -->
     </section><!-- /.overview -->
 
-    <section class="blog" id="blog">
-      <div class="blog__inner">
+    <section class="top-blog" id="top-blog">
+      <div class="top-blog__inner">
         <div class="section-header">
-          <h2 class="section-header__title blog__title">blog</h2><!-- /.section-header__title -->
-          <span class="section-header__subtitle blog__subtitle">ブログ</span><!-- /.section-header__subtitle -->
+          <h2 class="section-header__title top-blog__title">blog</h2><!-- /.section-header__title -->
+          <span class="section-header__subtitle top-blog__subtitle">ブログ</span><!-- /.section-header__subtitle -->
         </div><!-- /.section-header -->
-        <div class="blog__contents">
-          <a href="#" class="blog__content card blog__content--new">
+        <div class="top-blog__contents">
+          <a href="#" class="top-blog__content card top-blog__content--new">
             <figure class="card__img">
               <img src="./images/common/blog1.jpg" alt="ブログ1">
             </figure><!-- /.card__img -->
@@ -254,8 +254,8 @@
                 <time class="card__date" datetime="2021-07-20">2021.07.20</time>
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="blog__content card">
+          </a><!-- /.top-blog__content -->
+          <a href="#" class="top-blog__content card">
             <figure class="card__img">
               <img src="./images/common/blog2.jpg" alt="ブログ1">
             </figure><!-- /.card__img -->
@@ -271,8 +271,8 @@
                 <time class="card__date" datetime="2021-07-20">2021.07.20</time>
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="blog__content card">
+          </a><!-- /.top-blog__content -->
+          <a href="#" class="top-blog__content card">
             <figure class="card__img">
               <img src="./images/common/blog3.jpg" alt="ブログ1">
             </figure><!-- /.card__img -->
@@ -288,12 +288,11 @@
                 <time class="card__date" datetime="2021-07-20">2021.07.20</time>
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-        </div><!-- /.blog__contents -->
-        <a href="#" class="btn blog__btn">詳しく見る</a><!-- /.btn -->
-      </div><!-- /.blog__inner -->
-    </section><!-- /.blog -->
-
+          </a><!-- /.top-blog__content -->
+        </div><!-- /.top-blog__contents -->
+        <a href="#" class="btn top-blog__btn">詳しく見る</a><!-- /.btn -->
+      </div><!-- /.top-blog__inner -->
+    </section><!-- /.top-blog -->
   </div>
 
     <section class="contact" id="contact">
@@ -314,11 +313,11 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__wrapper">
-        <h1 class="footer__title">
+        <div class="footer__title">
           <a href="#" class="footer__logo">
             <img src="./images/common/codeups.svg" alt="codeups">
           </a><!-- /.footer__logo -->
-        </h1><!-- /.footer__title -->
+        </div><!-- /.footer__title -->
         <nav class="footer__nav">
           <ul class="footer__lists">
             <li class="footer__list">
@@ -330,21 +329,21 @@
               <a href="#works" class="footer__link">
                 制作実績
               </a><!-- /.footer__link -->
-              <li class="footer__list">
-                <a href="#overview" class="footer__link">
-                  企業概要
-                </a><!-- /.footer__link -->
-              </li><!-- /.footer__list -->
-              <li class="footer__list">
-                <a href="#" class="footer__link">
-                  自社メディア
-                </a><!-- /.footer__link -->
-              </li><!-- /.footer__list -->
-              <li class="footer__list">
-                <a href="#contact" class="footer__link">
-                  お問い合わせ
-                </a><!-- /.footer__link -->
-              </li><!-- /.footer__list -->
+            </li><!-- /.footer__list -->
+            <li class="footer__list">
+              <a href="#overview" class="footer__link">
+                企業概要
+              </a><!-- /.footer__link -->
+            </li><!-- /.footer__list -->
+            <li class="footer__list">
+              <a href="#" class="footer__link">
+                自社メディア
+              </a><!-- /.footer__link -->
+            </li><!-- /.footer__list -->
+            <li class="footer__list">
+              <a href="#contact" class="footer__link">
+                お問い合わせ
+              </a><!-- /.footer__link -->
             </li><!-- /.footer__list -->
           </ul><!-- /.footer__lists -->
         </nav><!-- /.footer__nav -->

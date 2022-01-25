@@ -53,8 +53,8 @@
   transform: scale(0, 1);
   transform-origin: center top;
 }
-.footer__link:hover{
-  &::after{
+.footer__link:hover::after{
+  @include mq(md) {
     opacity: 1;
     transform: scale(1, 1);
   }

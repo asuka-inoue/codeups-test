@@ -72,8 +72,8 @@
   transform: scale(0, 1);
   transform-origin: center top;
 }
-.header__link:hover{
-  &::after{
+.header__link:hover::after{
+  @include mq(md) {
     opacity: 1;
     transform: scale(1, 1);
   }
@@ -90,13 +90,16 @@
   padding: 0 rem(31);
 }
 .header__list--white:hover {
-  background: $text-color;
-  .header__link{
-    color: $white;
+  @include mq(md) {
+    background: $text-color;
+    .header__link{
+      color: $white;
+    }
+    .header__link::after{
+      display: none;
+    }
   }
-  .header__link::after{
-    display: none;
-  }
+  
 }
 .header__btn{
   position: relative;
@@ -136,7 +139,7 @@
   margin: 0 0 rem(1) 0;
 }
 .header__btn.is-active span:nth-child(1) { 
-  transform: translateY(rem(6)) rotate(-45deg);
+  transform: translateY(rem(7)) rotate(-45deg);
   }
 .header__btn.is-active span:nth-child(2) {
   opacity: 0;

@@ -37,8 +37,10 @@
   }
 }
 .card:hover .card__body {
-  background: $text-color;
-  transition: ease .3s;
+  @include mq(md) {
+    background: $text-color;
+    transition: ease .3s;
+  }
 }
 .card__title {
   font-size: rem(18);
@@ -46,7 +48,9 @@
   letter-spacing: 1px;
 }
 .card:hover .card__title {
-  color: $white;
+  @include mq(md) {
+    color: $white;
+  }
 }
 .card__text {
   font-size: rem(14);
@@ -58,7 +62,9 @@
   }
 }
 .card:hover .card__text {
-  color: $white;
+  @include mq(md) {
+    color: $white;
+  }
 }
 .card__info {
   display: flex;
@@ -87,5 +93,7 @@
   }
 }
 .card:hover .card__date {
-  color: $white;
+  @include mq(md) {
+    color: $white;
+  }
 }

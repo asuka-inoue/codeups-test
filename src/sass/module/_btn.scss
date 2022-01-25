@@ -36,6 +36,8 @@
 }
 
 .btn:hover::before{
-  transform: translateX(0);
-  opacity: 1;
+  @include mq(md) {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

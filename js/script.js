@@ -35,7 +35,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".js-hamburger-nav").removeClass("is-active");
       }
     });
-    $(".header__sp-link").click(function () {
+    $(".js-link").click(function () {
       $(".js-hamburger-nav,.js-hamburger").removeClass("is-active");
     });
   

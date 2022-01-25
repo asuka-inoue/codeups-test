@@ -52,7 +52,9 @@
   }
 }
 .contact__btn:hover {
-  color: $text-color;
+  @include mq(md) {
+    color: $text-color;
+  }
 }
 .contact__btn::before {
   background-color: $white;

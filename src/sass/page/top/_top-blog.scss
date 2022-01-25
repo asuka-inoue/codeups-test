@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.blog__inner{
+.top-blog__inner{
   margin-top: rem(48);
   padding: 0 $padding-sp;
   @include mq(md){
@@ -9,7 +9,7 @@
   }
 }
 
-.blog__title {
+.top-blog__title {
   @include mq(md) {
     text-align: right;
     padding-right: rem(80);
@@ -17,7 +17,7 @@
   }
 }
 
-.blog__subtitle {
+.top-blog__subtitle {
   margin-top: rem(-23);
   @include mq(md) {
     padding-top: rem(14);
@@ -25,7 +25,7 @@
   }
 }
 
-.blog__contents{
+.top-blog__contents{
   margin-top: rem(64);
   @include mq(md){
     display: flex;
@@ -35,7 +35,7 @@
   }
 }
 
-.blog__content + .blog__content{
+.top-blog__content + .top-blog__content{
   margin-top: rem(25);
   @include mq(md){
     margin-left: rem(25);
@@ -43,11 +43,11 @@
   }
 }
 
-.blog__content--new {
+.top-blog__content--new {
   position: relative;
 }
 
-.blog__content--new::before {
+.top-blog__content--new::before {
   position: absolute;
   content: "new";
   display: flex;
@@ -67,16 +67,18 @@
 
 }
 
-.blog__btn{
+.top-blog__btn{
   margin: rem(24) auto 0;
   @include mq(md) {
     max-width: rem(360);
     margin: rem(48) auto 0;
   }
 }
-.blog__btn:hover {
-  color: $text-color;
+.top-blog__btn:hover {
+  @include mq(md) {
+    color: $text-color;
+  }
 }
-.blog__btn::before {
+.top-blog__btn::before {
   background-color: $white;
 }
