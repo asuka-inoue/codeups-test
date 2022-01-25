@@ -20,6 +20,11 @@
   }
 }
 
+.works__wrapper {
+  @include mq(md) {
+    padding: 0 $padding-pc;
+  }
+}
 .works__body {
   margin-top: rem(48);
   @include mq(md) {

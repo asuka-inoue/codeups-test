@@ -19,6 +19,11 @@
   }
 }
 
+.overview__wrapper {
+  @include mq(md) {
+    padding: 0 $padding-pc;
+  }
+}
 .overview__body {
   margin-top: rem(48);
   @include mq(md) {
