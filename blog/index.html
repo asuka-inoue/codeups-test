@@ -21,7 +21,7 @@
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <!-- css -->
   <link rel="stylesheet" href="../css/styles.css">
@@ -34,7 +34,7 @@
   <header class="header">
     <div class="header__inner">
       <h1 class="header__title">
-        <a href="#" class="header__logo">
+        <a href="../index.html" class="header__logo">
           <img src="../images/common/codeups.svg" alt="codeups">
         </a><!-- /.header__logo -->
       </h1><!-- /.header__title -->
@@ -85,8 +85,221 @@
     </div><!-- /.header__inner -->
   </header>
   <main>
-    
+    <div class="page-title main-view">
+      <div class="page-title__wrap  blog__wrap">
+        <img src="../images/common/sp-blog-mv.jpg" alt="" class="u-mobile">
+        <img src="../images/common/blog-mv.jpg" alt="" class="u-desktop">
+        <h2 class="blog__title">ブログ</h2>
+      </div><!-- /.page-title__wrapper -->
+    </div><!-- /.page-title -->
 
+    <div class="inner">
+      <!-- ぱんくず -->
+      <div id="breadcrumb">
+        <div class="bc_inner">
+          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <!-- 1つめ -->
+            <li class="breadcrumb__list" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+              <a class="breadcrumb__link" itemprop="item" href="../index.html">
+                <span itemprop="name">トップ</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>           
+            <!-- 2つめ -->
+            <li class="breadcrumb__list" itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+              <a class="breadcrumb__link" itemprop="item" href="#">
+                <span itemprop="name">ブログ記事一覧</span>
+              </a>
+                <meta itemprop="position" content="2" />
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.inner -->
+
+    <section class="blog">
+      <div class="inner blog__inner">
+        <div class="blog__search">
+          <span class="blog__searchitem is-active" data-group="">ALL</span>
+          <span class="blog__searchitem" data-group="a">カテゴリ1</span>
+          <span class="blog__searchitem" data-group="b">カテゴリカテゴリ</span>
+          <span class="blog__searchitem" data-group="c">カテ</span>
+        </div>
+
+        <div class="blog__contents">
+          <a href="#" class="top-blog__content card top-blog__content--new" data-group="a">
+            <figure class="card__img">
+              <img src="../images/common/blog1.jpg" alt="ブログ1">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="b">
+            <figure class="card__img">
+              <img src="../images/common/blog2.jpg" alt="ブログ2">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="c">
+            <figure class="card__img">
+              <img src="../images/common/blog3.jpg" alt="ブログ3">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="a">
+            <figure class="card__img">
+              <img src="../images/common/blog4.jpg" alt="ブログ4">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="b">
+            <figure class="card__img">
+              <img src="../images/common/blog5.jpg" alt="ブログ5">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="c">
+            <figure class="card__img">
+              <img src="../images/common/blog6.jpg" alt="ブログ6">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="a">
+            <figure class="card__img">
+              <img src="../images/common/blog7.jpg" alt="ブログ7">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="b">
+            <figure class="card__img">
+              <img src="../images/common/blog8.jpg" alt="ブログ8">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+          <a href="#" class="top-blog__content card" data-group="c">
+            <figure class="card__img">
+              <img src="../images/common/blog9.jpg" alt="ブログ9">
+            </figure><!-- /.card__img -->
+            <div class="card__body">
+              <h3 class="card__title">
+                タイトルが入ります。タイトルが入ります。
+              </h3><!-- /.card__title -->
+              <p class="card__text">
+                説明文が入ります。説明文が入ります。説明文が入ります。
+              </p><!-- /.card__text -->
+              <div class="card__info">
+                <p class="card__category">カテゴリ</p>
+                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+              </div><!-- /.card__info -->
+            </div><!-- /.card__body -->
+          </a><!-- /.blog__content -->
+        </div><!-- /.blog__contents -->
+
+        <div class="pager">
+          <div class="pager__wrap">
+            <a href="#" class="pager__prev">prev</a>
+            <a href="#" class="pager__numbers current">1</a>
+            <a href="#" class="pager__numbers">2</a>
+            <a href="#" class="pager__numbers">3</a>
+            <a href="#" class="pager__numbers">4</a>
+            <a href="#" class="pager__next">next</a>
+          </div><!-- /.pager__wrap -->
+          
+        </div><!-- /.pager -->
+
+
+      </div><!-- /.inner -->
+    </section><!-- /.blog__contents -->
+    
     <section class="contact" id="contact">
       <div class="contact__inner">
         <div class="section-header">

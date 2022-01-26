@@ -8,6 +8,7 @@
   transition: ease .3s;
   @include mq(md) {
     margin: initial;
+    width: calc((100% - #{rem(50)}) / 3);
   }
 }
 
@@ -96,4 +97,8 @@
   @include mq(md) {
     color: $white;
   }
+}
+
+.card.is-hide {
+  display: none;
 }

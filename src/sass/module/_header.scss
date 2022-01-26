@@ -104,9 +104,8 @@
 .header__btn{
   position: relative;
   width: rem(26);
-  height: rem(15);
+  height: rem(16);
   margin-right: rem(8);
-  margin-bottom: rem(11);
   z-index: 20;
   @include mq(md){
     display: none;

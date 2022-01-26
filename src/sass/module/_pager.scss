@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.pager__wrap {
+  max-width: rem(332);
+  width: 100%;
+  margin: rem(80) auto 0;
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  @include mq(md) {
+    margin-top: rem(104);
+  }
+}
+
+.pager__numbers {
+  width: rem(24);
+  height: rem(24);
+  border: 1px solid $white;
+  font-size: rem(16);
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: rem(16);
+}
+
+.pager__numbers:nth-child(5) {
+    margin-right: rem(24);
+  }
+
+.pager__numbers.current {
+  background: $white;
+  color: $text-color;
+}
+
+.pager__numbers:hover {
+  @include mq(md) {
+    border: initial;
+    background: #F9F871;
+    color: $text-color;
+  }
+}
+.pager__prev {
+  width: rem(73);
+  height: rem(24);
+  border: 1px solid $white;
+  font-size: rem(16);
+  color: $white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: rem(24);
+  @include mq(md) {
+    width: rem(71);
+    margin-right: rem(25);
+  }
+}
+
+.pager__next {
+  width: rem(71);
+  height: rem(24);
+  border: 1px solid $white;
+  font-size: rem(16);
+  color: $white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pager__prev:hover,
+.pager__next:hover {
+  @include mq(md) {
+    border: 1px solid #F9F871;
+    background: #F9F871;
+    color: $text-color;
+  }
+}
