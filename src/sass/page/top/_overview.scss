@@ -7,12 +7,6 @@
   }
 }
 
-.overview__title {
-  @include mq(md) {
-    padding-left: rem(90);
-  }
-}
-
 .overview__subtitle {
   @include mq(md) {
     padding-top: rem(13);
@@ -67,7 +61,7 @@
   @include mq(md) {
     max-width: rem(542);
     width: 100%;
-    padding: rem(108) rem(32) 0 0;
+    padding: rem(108) rem(32) rem(108) 0;
   }
 }
 

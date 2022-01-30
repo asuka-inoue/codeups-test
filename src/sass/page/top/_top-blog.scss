@@ -12,7 +12,6 @@
 .top-blog__title {
   @include mq(md) {
     text-align: right;
-    padding-right: rem(80);
     margin-bottom: rem(-120);
   }
 }
@@ -29,10 +28,11 @@
   margin-top: rem(64);
   @include mq(md){
     display: flex;
+    flex-wrap: wrap;
     max-width: rem(1100);
     width: 100%;
     margin: rem(34) auto 0;
-    column-gap: rem(25);
+    gap: rem(48) rem(25);
   }
 }
 

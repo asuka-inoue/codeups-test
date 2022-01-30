@@ -7,7 +7,9 @@
   position: fixed;
   bottom: rem(-200);
   right: rem(21);
+  cursor: pointer;
   z-index: 20;
+  transition: all .3s;
   @include mq(md){
     right: rem(31);
   }
@@ -38,6 +40,7 @@
     }
   }
   .pagetop:hover{
+    transition: all .3s;
     @include mq(md) {
       background: $text-color;
     }

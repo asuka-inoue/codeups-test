@@ -10,7 +10,6 @@
 .works__title {
   @include mq(md) {
     text-align: right;
-    padding-right: rem(90);
   }
 }
 .works__subtitle {
@@ -48,7 +47,7 @@
   @include mq(md) {
     max-width: rem(542);
     width: 100%;
-    padding: rem(110) 0 0 rem(32);
+    padding: rem(110) 0 rem(110) rem(32);
   }
 }
 

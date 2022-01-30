@@ -1,9 +1,13 @@
 @use "global" as *;
 
-.pager__wrap {
+.wp-pagenavi {
+  margin: rem(80) auto 0;
+}
+
+.wp-pagenavi__wrap {
   max-width: rem(332);
   width: 100%;
-  margin: rem(80) auto 0;
+  margin: auto;
   display: flex;
   align-items: center;
   letter-spacing: 2px;
@@ -12,7 +16,7 @@
   }
 }
 
-.pager__numbers {
+.wp-pagenavi__numbers {
   width: rem(24);
   height: rem(24);
   border: 1px solid $white;
@@ -24,23 +28,23 @@
   margin-right: rem(16);
 }
 
-.pager__numbers:nth-child(5) {
+.wp-pagenavi__numbers:nth-child(5) {
     margin-right: rem(24);
   }
 
-.pager__numbers.current {
+.wp-pagenavi .current {
   background: $white;
   color: $text-color;
 }
 
-.pager__numbers:hover {
+.wp-pagenavi__numbers:hover {
   @include mq(md) {
     border: initial;
     background: #F9F871;
     color: $text-color;
   }
 }
-.pager__prev {
+.wp-pagenavi__prev {
   width: rem(73);
   height: rem(24);
   border: 1px solid $white;
@@ -57,7 +61,7 @@
   }
 }
 
-.pager__next {
+.wp-pagenavi__next {
   width: rem(71);
   height: rem(24);
   border: 1px solid $white;
@@ -69,8 +73,8 @@
   justify-content: center;
 }
 
-.pager__prev:hover,
-.pager__next:hover {
+.wp-pagenavi__prev:hover,
+.wp-pagenavi__next:hover {
   @include mq(md) {
     border: 1px solid #F9F871;
     background: #F9F871;

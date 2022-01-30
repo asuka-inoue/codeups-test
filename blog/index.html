@@ -95,21 +95,21 @@
 
     <div class="inner">
       <!-- ぱんくず -->
-      <div id="breadcrumb">
+      <div id="breadcrumbs">
         <div class="bc_inner">
-          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
             <!-- 1つめ -->
-            <li class="breadcrumb__list" itemprop="itemListElement" itemscope
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
             itemtype="https://schema.org/ListItem">
-              <a class="breadcrumb__link" itemprop="item" href="../index.html">
+              <a class="breadcrumbs__link" itemprop="item" href="../index.html">
                 <span itemprop="name">トップ</span>
               </a>
               <meta itemprop="position" content="1" />
             </li>           
             <!-- 2つめ -->
-            <li class="breadcrumb__list" itemprop="itemListElement" itemscope
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
                     itemtype="https://schema.org/ListItem">
-              <a class="breadcrumb__link" itemprop="item" href="#">
+              <a class="breadcrumbs__link" itemprop="item" href="#">
                 <span itemprop="name">ブログ記事一覧</span>
               </a>
                 <meta itemprop="position" content="2" />
@@ -284,17 +284,17 @@
           </a><!-- /.blog__content -->
         </div><!-- /.blog__contents -->
 
-        <div class="pager">
-          <div class="pager__wrap">
-            <a href="#" class="pager__prev">prev</a>
-            <a href="#" class="pager__numbers current">1</a>
-            <a href="#" class="pager__numbers">2</a>
-            <a href="#" class="pager__numbers">3</a>
-            <a href="#" class="pager__numbers">4</a>
-            <a href="#" class="pager__next">next</a>
-          </div><!-- /.pager__wrap -->
+        <div class="wp-pagenavi">
+          <div class="wp-pagenavi__wrap">
+            <a href="#" class="wp-pagenavi__prev" rel="prev">prev</a>
+            <span class="wp-pagenavi__numbers current">1</span>
+            <a href="#" class="wp-pagenavi__numbers">2</a>
+            <a href="#" class="wp-pagenavi__numbers">3</a>
+            <a href="#" class="wp-pagenavi__numbers">4</a>
+            <a href="#" class="wp-pagenavi__next" rel="next">next</a>
+          </div><!-- /.wp-pagenavi__wrap -->
           
-        </div><!-- /.pager -->
+        </div><!-- /.wp-pagenavi -->
 
 
       </div><!-- /.inner -->

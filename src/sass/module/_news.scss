@@ -20,6 +20,8 @@
   @include mq(md){
     padding-top: initial;
     margin-left: rem(13);
+    max-width: rem(572);
+    width: 100%;
   }
 }
 .news__link {

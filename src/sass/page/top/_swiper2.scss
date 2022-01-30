@@ -32,7 +32,8 @@
     background: linear-gradient(90deg, transparent 0%, transparent 53%, $text-color 53%, $text-color 100%);
     .swiper-pagination{
       left: rem(-22);
-      bottom: rem(49);
+      bottom: initial;
+      top: rem(475);
     }
   }
 }
