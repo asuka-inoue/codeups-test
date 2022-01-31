@@ -27,12 +27,7 @@
 .top-blog__contents{
   margin-top: rem(64);
   @include mq(md){
-    display: flex;
-    flex-wrap: wrap;
-    max-width: rem(1100);
-    width: 100%;
     margin: rem(34) auto 0;
-    gap: rem(48) rem(25);
   }
 }
 

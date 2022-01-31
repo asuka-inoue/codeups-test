@@ -12,6 +12,16 @@
   }
 }
 
+.card__lists {
+  @include mq(md){
+    display: flex;
+    flex-wrap: wrap;
+    max-width: rem(1100);
+    width: 100%;
+    gap: rem(48) rem(25);
+  }
+}
+
 .card__img {
   padding-top: 66.5671642%;
   position: relative;

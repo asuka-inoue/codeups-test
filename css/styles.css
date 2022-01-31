@@ -284,6 +284,19 @@ select::-ms-expand {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .card__lists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 68.75rem;
+    width: 100%;
+    gap: 3rem 1.5625rem;
+  }
+}
+
 .card__img {
   padding-top: 66.5671642%;
   position: relative;
@@ -1861,15 +1874,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 @media screen and (min-width: 768px) {
   .top-blog__contents {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    max-width: 68.75rem;
-    width: 100%;
     margin: 2.125rem auto 0;
-    gap: 3rem 1.5625rem;
   }
 }
 
