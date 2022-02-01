@@ -31,12 +31,12 @@
   }
 }
 
-.top-blog__content + .top-blog__content{
-  margin-top: rem(25);
-  @include mq(md){
-    margin-top: initial;
-  }
-}
+// .top-blog__content + .top-blog__content{
+//   margin-top: rem(25);
+//   @include mq(md){
+//     margin-top: initial;
+//   }
+// }
 
 .top-blog__content--new {
   position: relative;

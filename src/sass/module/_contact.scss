@@ -3,7 +3,7 @@
 .contact__inner {
   margin-top: rem(120);
   padding: $padding-sp $padding-sp rem(64);
-  background: $text-color;
+  background: #3D3D3D;
   @include mq(md){
     margin-top: rem(150);
     padding: rem(54) $padding-pc rem(149);
