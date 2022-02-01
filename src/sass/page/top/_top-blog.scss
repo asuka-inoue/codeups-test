@@ -12,7 +12,6 @@
 .top-blog__title {
   @include mq(md) {
     text-align: right;
-    margin-bottom: rem(-120);
   }
 }
 
@@ -21,6 +20,7 @@
   @include mq(md) {
     padding-top: rem(14);
     padding-right: rem(26);
+    margin-top: rem(-120);
   }
 }
 
@@ -30,13 +30,6 @@
     margin: rem(34) auto 0;
   }
 }
-
-// .top-blog__content + .top-blog__content{
-//   margin-top: rem(25);
-//   @include mq(md){
-//     margin-top: initial;
-//   }
-// }
 
 .top-blog__content--new {
   position: relative;

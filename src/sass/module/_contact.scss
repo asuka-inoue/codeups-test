@@ -13,13 +13,13 @@
   margin-top: rem(-2);
   @include mq(md){
     margin-top: initial;
-    margin-bottom: rem(-80);
   }
 }
 
 .contact__subtitle{
   @include mq(md){
     padding-top: rem(51);
+    margin-top: rem(-80);
   }
 }
 

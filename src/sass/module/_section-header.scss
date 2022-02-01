@@ -18,7 +18,6 @@
   @include mq(md){
     text-align: left;
     font-size: rem(110);
-    margin-bottom: rem(-127);
   }
 }
 
@@ -30,7 +29,7 @@
   margin-top: rem(-26);
   letter-spacing: rem(2);
   @include mq(md){
-    margin-top: initial;
+    margin-top: rem(-127);
     font-size: rem(30);
   }
 }

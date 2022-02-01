@@ -459,13 +459,13 @@ select::-ms-expand {
   .contact__title {
     margin-top: 0;
     margin-top: initial;
-    margin-bottom: -5rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .contact__subtitle {
     padding-top: 3.1875rem;
+    margin-top: -5rem;
   }
 }
 
@@ -840,8 +840,6 @@ select::-ms-expand {
 .header__btn.is-active {
   width: 23px;
   width: 1.4375rem;
-  margin: 0 0 1px 0;
-  margin: 0 0 0.0625rem 0;
 }
 
 .header__btn.is-active span:nth-child(1) {
@@ -1140,7 +1138,6 @@ select::-ms-expand {
   .section-header__title {
     text-align: left;
     font-size: 6.875rem;
-    margin-bottom: -7.9375rem;
   }
 }
 
@@ -1157,8 +1154,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .section-header__subtitle {
-    margin-top: 0;
-    margin-top: initial;
+    margin-top: -7.9375rem;
     font-size: 1.875rem;
   }
 }
@@ -1608,7 +1604,7 @@ select::-ms-expand {
   .overview__body {
     max-width: 68.75rem;
     width: 100%;
-    margin: 2.125rem auto;
+    margin: 2.125rem auto 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1849,7 +1845,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 @media screen and (min-width: 768px) {
   .top-blog__title {
     text-align: right;
-    margin-bottom: -7.5rem;
   }
 }
 
@@ -1861,6 +1856,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .top-blog__subtitle {
     padding-top: 0.875rem;
     padding-right: 1.625rem;
+    margin-top: -7.5rem;
   }
 }
 
@@ -1966,7 +1962,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .works__body {
     max-width: 68.6875rem;
     width: 100%;
-    margin: 3rem auto;
+    margin: 3rem auto 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

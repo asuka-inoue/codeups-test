@@ -29,7 +29,7 @@
   @include mq(md) {
     max-width: rem(1099);
     width: 100%;
-    margin: rem(48) auto;
+    margin: rem(48) auto 0;
     display: flex;
     justify-content: left;
   }
