@@ -417,13 +417,13 @@ select::-ms-expand {
   font-size: 0.875rem;
   line-height: 1;
   letter-spacing: 1px;
-  margin-right: 2px;
-  margin-right: 0.125rem;
+  padding-right: 2px;
+  padding-right: 0.125rem;
 }
 @media screen and (min-width: 768px) {
   .card__date {
-    margin-right: 0;
-    margin-right: initial;
+    padding-right: 0;
+    padding-right: initial;
   }
 }
 
@@ -661,8 +661,7 @@ select::-ms-expand {
   width: 100%;
   height: inherit;
   margin: 0 auto;
-  padding: 0 12px 0 20px;
-  padding: 0 0.75rem 0 20px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -799,8 +798,6 @@ select::-ms-expand {
   width: 1.625rem;
   height: 16px;
   height: 1rem;
-  margin-right: 8px;
-  margin-right: 0.5rem;
   z-index: 20;
 }
 @media screen and (min-width: 768px) {
@@ -1201,13 +1198,13 @@ select::-ms-expand {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 16px;
-  margin-right: 1rem;
+  margin-left: 16px;
+  margin-left: 1rem;
 }
 
-.wp-pagenavi__numbers:nth-child(5) {
-  margin-right: 24px;
-  margin-right: 1.5rem;
+.wp-pagenavi__numbers:nth-child(2) {
+  margin-left: 26px;
+  margin-left: 1.625rem;
 }
 
 .wp-pagenavi .current {
@@ -1243,13 +1240,10 @@ select::-ms-expand {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 24px;
-  margin-right: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .wp-pagenavi__prev {
     width: 4.4375rem;
-    margin-right: 1.5625rem;
   }
 }
 
@@ -1272,6 +1266,8 @@ select::-ms-expand {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 23px;
+  margin-left: 1.4375rem;
 }
 
 @media screen and (min-width: 768px) {

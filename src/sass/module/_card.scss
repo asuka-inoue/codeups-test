@@ -105,9 +105,9 @@
   font-size: rem(14);
   line-height: 1;
   letter-spacing: 1px;
-  margin-right: rem(2);
+  padding-right: rem(2);
   @include mq(md) {
-    margin-right: initial;
+    padding-right: initial;
   }
 }
 .card:hover .card__date {

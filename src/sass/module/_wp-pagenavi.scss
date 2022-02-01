@@ -25,12 +25,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: rem(16);
+  margin-left: rem(16);
 }
 
-.wp-pagenavi__numbers:nth-child(5) {
-    margin-right: rem(24);
-  }
+.wp-pagenavi__numbers:nth-child(2) {
+  margin-left: rem(26);
+}
 
 .wp-pagenavi .current {
   background: $white;
@@ -54,10 +54,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: rem(24);
   @include mq(md) {
     width: rem(71);
-    margin-right: rem(25);
   }
 }
 
@@ -71,6 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: rem(23);
 }
 
 .wp-pagenavi__prev:hover,
