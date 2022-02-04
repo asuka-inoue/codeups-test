@@ -12,8 +12,6 @@
 .top-blog__title {
   @include mq(md) {
     text-align: right;
-    padding-right: rem(80);
-    margin-bottom: rem(-120);
   }
 }
 
@@ -22,24 +20,14 @@
   @include mq(md) {
     padding-top: rem(14);
     padding-right: rem(26);
+    margin-top: rem(-120);
   }
 }
 
 .top-blog__contents{
   margin-top: rem(64);
   @include mq(md){
-    display: flex;
-    max-width: rem(1100);
-    width: 100%;
     margin: rem(34) auto 0;
-  }
-}
-
-.top-blog__content + .top-blog__content{
-  margin-top: rem(25);
-  @include mq(md){
-    margin-left: rem(25);
-    margin-top: initial;
   }
 }
 
@@ -59,8 +47,8 @@
   text-transform: capitalize;
   width: rem(60);
   height: rem(60);
-  top: rem(-16);
-  left: rem(-15);
+  top: rem(-18);
+  left: rem(-14);
   border-radius: 50%;
   background: #FFBA6A;
   z-index: 1;

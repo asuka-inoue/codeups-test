@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.wp-pagenavi {
+  margin: rem(80) auto 0;
+}
+
+.wp-pagenavi__wrap {
+  max-width: rem(332);
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  @include mq(md) {
+    margin-top: rem(104);
+  }
+}
+
+.wp-pagenavi__numbers {
+  width: rem(24);
+  height: rem(24);
+  border: 1px solid $white;
+  font-size: rem(16);
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: rem(16);
+}
+
+.wp-pagenavi__numbers:nth-child(2) {
+  margin-left: rem(26);
+}
+
+.wp-pagenavi .current {
+  background: $white;
+  color: $text-color;
+}
+
+.wp-pagenavi__numbers:hover {
+  @include mq(md) {
+    border: initial;
+    background: #F9F871;
+    color: $text-color;
+  }
+}
+.wp-pagenavi__prev {
+  width: rem(73);
+  height: rem(24);
+  border: 1px solid $white;
+  font-size: rem(16);
+  color: $white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq(md) {
+    width: rem(71);
+  }
+}
+
+.wp-pagenavi__next {
+  width: rem(71);
+  height: rem(24);
+  border: 1px solid $white;
+  font-size: rem(16);
+  color: $white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: rem(23);
+}
+
+.wp-pagenavi__prev:hover,
+.wp-pagenavi__next:hover {
+  @include mq(md) {
+    border: 1px solid #F9F871;
+    background: #F9F871;
+    color: $text-color;
+  }
+}
