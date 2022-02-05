@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.page-title__wrap {
+  position: relative;
+  padding-top: 113.333333%;
+  @include mq(md) {
+    padding-top: 28.90525%;
+  }
+}
+
+.page-title__wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-title__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  font-weight: $bold;
+  font-size: rem(30);
+  letter-spacing: 2px;
+  padding-top: rem(6);
+  @include mq(md) {
+    font-size: rem(36);
+    padding-bottom: rem(7);
+  }
+}

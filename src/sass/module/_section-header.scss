@@ -2,9 +2,10 @@
 
 .section-header {
   @include mq(md) {
-    max-width: rem(1100);
+    max-width: rem(1150);
     width: 100%;
     margin: auto;
+    padding: 0 $padding-pc;
   }
 }
 .section-header__title {

@@ -1,55 +1,44 @@
 @use "global" as *;
 
-.news__contents{
-  padding-top: rem(23);
+.news__inner {
+  padding-top: rem(85);
   @include mq(md) {
-    padding-top: rem(32);
+    max-width: rem(910);
+    width: 100%;
+    margin: auto;
+    padding-top: rem(69);
+  } 
+}
+
+.news__content {
+  @include mq(md) {
+    display: flex;
+    align-items: flex-start;
   }
 }
-.news__inner{
-  @include mq(md){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 rem(54);
-  }
+
+.news__content + .news__content {
+  margin-top: rem(32);
 }
 .news__title {
   padding-top: rem(13);
   line-height: 1.3;
   @include mq(md){
-    padding-top: initial;
-    margin-left: rem(13);
+    padding-top: 0;
+    margin-left: rem(61);
     max-width: rem(572);
     width: 100%;
+    line-height: 1.5;
   }
 }
+
 .news__link {
   color: $white;
   font-weight: $regular;
   font-size: rem(16);
   @include mq(md){
     &:hover{
-      text-decoration: underline;
+      color: #F9F871;
     }
   }
-}
-.news__btn {
-  margin: rem(28) auto 0;
-  @include mq(md){
-    max-width: rem(134);
-    margin: initial;
-    font-size: rem(16);
-    letter-spacing: 0;
-    background: $white;
-    color: #000;
-    border: initial;
-    padding: rem(7) 0;
-    &:hover{
-      color: $white;
-    }
-  }
-}
-.news__btn::before {
-  background-color: $text-color;
 }

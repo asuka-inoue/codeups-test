@@ -1,30 +1,30 @@
 @use "global" as *;
 
-.works__inner {
+.top-works__inner {
   margin-top: rem(71);
   @include mq(md) {
     margin-top: rem(149);
   }
 }
 
-.works__title {
+.top-works__title {
   @include mq(md) {
     text-align: right;
   }
 }
-.works__subtitle {
+.top-works__subtitle {
   @include mq(md) {
     padding-top: rem(12);
     letter-spacing: 0.5px;
   }
 }
 
-.works__wrapper {
+.top-works__wrapper {
   @include mq(md) {
     padding: 0 $padding-pc;
   }
 }
-.works__body {
+.top-works__body {
   margin-top: rem(48);
   @include mq(md) {
     max-width: rem(1099);
@@ -35,13 +35,13 @@
   }
 }
 
-.works__wrapper{
+.top-works__wrapper{
   @include mq(md){
     background: linear-gradient(90deg, transparent 0%, transparent 50%, $text-color 50%, $text-color 100%);
     margin-top: rem(-15);
   }
 }
-.works__content {
+.top-works__content {
   background: $text-color;
   padding: 0 $padding-sp $padding-sp;
   @include mq(md) {
@@ -51,7 +51,7 @@
   }
 }
 
-.works__contentttl {
+.top-works__contentttl {
   color: $white;
   font-size: rem(20);
   font-weight: $regular;
@@ -66,14 +66,14 @@
   }
 }
 
-.works__textblock{
+.top-works__textblock{
   margin-top: rem(22);
   @include mq(md) {
     margin-top: rem(37);
   }
 }
 
-.works__text {
+.top-works__text {
   color: $white;
   font-size: rem(16);
   line-height: 1.448125;
@@ -84,7 +84,7 @@
   }
 }
 
-.works__btn{
+.top-works__btn{
   margin: rem(25) auto 0;
   @include mq(md) {
     max-width: rem(360);
@@ -92,11 +92,11 @@
   }
 }
 
-.works__btn:hover {
+.top-works__btn:hover {
   @include mq(md) {
     color: $text-color;
   }
 }
-.works__btn::before {
+.top-works__btn::before {
   background-color: $white;
 }

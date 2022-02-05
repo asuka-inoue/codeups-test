@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.works__search {
+  padding: 0 $padding-sp 0;
+  @include mq(md) {
+    padding: rem(115) $padding-pc 0;
+    max-width: rem(1140);
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.works__inner{
+  padding-top: rem(17);
+  @include mq(md) {
+    padding: rem(40) $padding-pc 0;
+    max-width: rem(1150);
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.works__contents {
+  @include mq(md) {
+    max-width: rem(1100);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(114) rem(48);
+  }
+}
+
+.works__img {
+  position: relative;
+}
+
+.works__img::before {
+  position: relative;
+  content: "";
+  display: block;
+  padding-top: 66.4%;
+  @include mq(md) {
+    padding-top: 66.4761905%;
+  }
+}
+
+.works__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  object-fit: cover;
+}
+
+.works__img::after {
+  position: absolute;
+  content: "カテゴリ1";
+  background: $black;
+  color: $white;
+  font-size: rem(16);
+  letter-spacing: 2px;
+  padding: rem(8) rem(20);
+  top: 0;
+  right: 0;
+}
+
+.works__title {
+  color: $white;
+  font-size: rem(20);
+  font-weight: $normal;
+  letter-spacing: 2px;
+  line-height: 1.75;
+  margin-top: rem(24);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(12);
+  }
+}
+
+.works__card.is-hide {
+  display: none;
+}
+
+.works__card {
+  display: block;
+  @include mq(md) {
+    width:calc((100% - #{rem(48)}) / 2);
+  }
+}
+
+.works__card:hover {
+  opacity: .7;
+}
+
+.works__card + .works__card {
+  margin-top: rem(48);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
