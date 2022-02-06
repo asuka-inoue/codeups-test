@@ -85,15 +85,7 @@
     </div><!-- /.header__inner -->
   </header>
   <main>
-    <div class="page-title main-view">
-      <div class="page-title__wrap">
-        <img src="../images/common/sp-content-mv.jpg" alt="" class="u-mobile">
-        <img src="../images/common/content-mv.jpg" alt="" class="u-desktop">
-        <h2 class="page-title__title">制作実績</h2>
-      </div><!-- /.page-title__wrapper -->
-    </div><!-- /.page-title -->
-
-    <div class="inner">
+    <div class="inner works-detail__inner">
       <!-- ぱんくず -->
       <div id="breadcrumbs">
         <div class="bc_inner">
@@ -109,63 +101,67 @@
             <!-- 2つめ -->
             <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
                     itemtype="https://schema.org/ListItem">
-              <a class="breadcrumbs__link" itemprop="item" href="#">
+              <a class="breadcrumbs__link" itemprop="item" href="../works/index.html">
                 <span itemprop="name">制作実績</span>
               </a>
                 <meta itemprop="position" content="2" />
+            </li>
+            <!-- 3つめ -->
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+              <a class="breadcrumbs__link" itemprop="item" href="#">
+                <span itemprop="name">制作実績詳細</span>
+              </a>
+                <meta itemprop="position" content="3" />
             </li>
           </ol>
         </div>
       </div>
     </div><!-- /.inner -->
 
-    <section class="works">
-      <div class="search__wrap works__search">
-        <span class="search__item is-active" data-group="">ALL</span>
-        <span class="search__item" data-group="a">カテゴリ1</span>
-        <span class="search__item" data-group="b">カテゴリカテゴリ</span>
-        <span class="search__item" data-group="c">カテ</span>
-      </div>
+    <section class="works-detail">
+      <div class="inner">
+        <h2 class="works-detail__title">
+          〇〇株式会社　制作実績
+        </h2><!-- /.works-detail__title -->
+        <div class="works-detail__post-info">
+          <time class="works-detail__date" datetime="2020-06-13">2020/06/13</time><!-- /.works-detail__date -->
+          <p class="works-detail__category">カテゴリ1</p><!-- /.works-detail__category -->
+        </div><!-- /.works-detail__post-info -->
+      </div><!-- /.inner -->
 
-      <div class="works__inner">
-        <div class="works__contents">
-          <a href="../works-detail/index.html" class="works__card" data-group="a">
-            <figure class="works__img">
-              <img src="../images/common/works-img1.jpg" alt="制作実績1">
-            </figure><!-- /.card__img -->
-            <h3 class="works__title">CodeUps株式会社</h3>
-          </a><!-- /.works__content -->
-          <a href="#" class="works__card" data-group="b">
-            <figure class="works__img">
-              <img src="../images/common/works-img2.jpg" alt="制作実績2">
-            </figure><!-- /.card__img -->
-            <h3 class="works__title">CodeUps株式会社</h3>
-          </a><!-- /.works__content -->
-          <a href="#" class="works__card" data-group="c">
-            <figure class="works__img">
-              <img src="../images/common/works-img3.jpg" alt="制作実績3">
-            </figure><!-- /.card__img -->
-            <h3 class="works__title">CodeUps株式会社</h3>
-          </a><!-- /.works__content -->
-          <a href="#" class="works__card" data-group="a">
-            <figure class="works__img">
-              <img src="../images/common/works-img4.jpg" alt="制作実績4">
-            </figure><!-- /.card__img -->
-            <h3 class="works__title">CodeUps株式会社</h3>
-          </a><!-- /.works__content -->
-          <a href="#" class="works__card" data-group="b">
-            <figure class="works__img">
-              <img src="../images/common/works-img5.jpg" alt="制作実績5">
-            </figure><!-- /.card__img -->
-            <h3 class="works__title">CodeUps株式会社</h3>
-          </a><!-- /.works__content -->
-          <a href="#" class="works__card" data-group="c">
-            <figure class="works__img">
-              <img src="../images/common/works-img6.jpg" alt="制作実績6">
-            </figure><!-- /.card__img -->
-            <h3 class="works__title">CodeUps株式会社</h3>
-          </a><!-- /.works__content -->
-        </div><!-- /.works__contents -->
+      <div class="gallery">                
+        <div class="swiper gallery-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide gallery-slide"><img src="../images/common/main-gallery1.jpg" alt="制作実績詳細1"></div>
+                <div class="swiper-slide gallery-slide"><img src="../images/common/gallery2.jpg" alt="制作実績詳細2"></div>
+                <div class="swiper-slide gallery-slide"><img src="../images/common/gallery3.jpg" alt="制作実績詳細3"></div>
+                <div class="swiper-slide gallery-slide"><img src="../images/common/gallery4.jpg" alt="制作実績詳細4"></div>
+                <div class="swiper-slide gallery-slide"><img src="../images/common/gallery5.jpg" alt="制作実績詳細5"></div>
+                <div class="swiper-slide gallery-slide"><img src="../images/common/gallery6.jpg" alt="制作実績詳細6"></div>
+                <div class="swiper-slide gallery-slide"><img src="../images/common/gallery7.jpg" alt="制作実績詳細7"></div>
+                <div class="swiper-slide gallery-slide"><img src="../images/common/gallery8.jpg" alt="制作実績詳細8"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery1.jpg" alt="制作実績詳細1"></div>
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery2.jpg" alt="制作実績詳細2"></div>
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery3.jpg" alt="制作実績詳細3"></div>
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery4.jpg" alt="制作実績詳細4"></div>
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery5.jpg" alt="制作実績詳細5"></div>
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery6.jpg" alt="制作実績詳細6"></div>
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery7.jpg" alt="制作実績詳細7"></div>
+                <div class="swiper-slide gallery-thumbs-side"><img src="../images/common/gallery8.jpg" alt="制作実績詳細8"></div>
+            </div>
+        </div>
+    </div>
+      
+
+      
 
         <div class="wp-pagenavi">
           <div class="wp-pagenavi__wrap">
@@ -176,12 +172,9 @@
             <a href="#" class="wp-pagenavi__numbers">4</a>
             <a href="#" class="wp-pagenavi__next" rel="next">next</a>
           </div><!-- /.wp-pagenavi__wrap -->
-          
         </div><!-- /.wp-pagenavi -->
 
-
-      </div><!-- /.inner -->
-    </section><!-- /.blog__contents -->
+    </section><!-- /.works-detail -->
     
     <section class="contact" id="contact">
       <div class="contact__inner">

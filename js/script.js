@@ -162,3 +162,42 @@ function search_filter(group) {
     }
   }
 };
+
+
+//サムネイルスライド
+var thumbs = new Swiper ('.gallery-thumbs', {
+  slidesPerView: 'auto',
+  spaceBetween: 24,
+  centeredSlides: true,
+  loop: true,
+  loopedSlides: 8,
+  slideToClickedSlide: true,
+  breakpoints: {
+    // 768px以上の場合
+    768: {
+      spaceBetween: 8,
+      centeredSlides: false,
+    }
+  }
+}
+);
+
+
+//メインスライド
+var slider3 = new Swiper ('.gallery-slider', {
+  slidesPerView: 1,
+  centeredSlides: true,
+  loop: true,
+  loopedSlides: 8, //スライドの枚数と同じ値を指定
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  // thumbs: {
+  //   swiper3: thumbs
+  // }
+});
+
+
+slider3.controller.control = thumbs;
+thumbs.controller.control = slider3;
