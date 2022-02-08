@@ -1,24 +1,24 @@
 @use "global" as *;
 
-.overview__inner {
+.top-overview__inner {
   margin-top: rem(73);
   @include mq(md) {
     margin-top: rem(148);
   }
 }
 
-.overview__subtitle {
+.top-overview__subtitle {
   @include mq(md) {
     padding-top: rem(13);
   }
 }
 
-.overview__wrapper {
+.top-overview__wrapper {
   @include mq(md) {
     padding: 0 $padding-pc;
   }
 }
-.overview__body {
+.top-overview__body {
   margin-top: rem(48);
   @include mq(md) {
     max-width: rem(1100);
@@ -28,12 +28,12 @@
     flex-direction: row-reverse;
   }
 }
-.overview__wrapper {
+.top-overview__wrapper {
   @include mq(md) {
     background: linear-gradient(90deg, $text-color 0%, $text-color 50%, transparent 50%, transparent 100%);
   }
 }
-.overview__img {
+.top-overview__img {
   position: relative;
   @include mq(md) {
     max-width: rem(557);
@@ -42,12 +42,12 @@
     background: linear-gradient(90deg, $text-color 0%, $text-color 47%, transparent 47%, transparent 100%);
   }
 }
-.overview__img::before{
+.top-overview__img::before{
   content: "";
   display: block;
   padding-top: 69.6%;
 }
-.overview__img img{
+.top-overview__img img{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -55,7 +55,7 @@
   width: 100%;
   object-fit: cover;
 }
-.overview__content {
+.top-overview__content {
   background: $text-color;
   padding: rem(23) $padding-sp $padding-sp;
   @include mq(md) {
@@ -65,7 +65,7 @@
   }
 }
 
-.overview__contentttl {
+.top-overview__contentttl {
   color: $white;
   font-size: rem(20);
   font-weight: $regular;
@@ -80,14 +80,14 @@
   }
 }
 
-.overview__textblock {
+.top-overview__textblock {
   margin-top: rem(23);
   @include mq(md) {
     margin-top: rem(37);
   }
 }
 
-.overview__text {
+.top-overview__text {
   color: $white;
   font-size: rem(16);
   line-height: 1.448125;
@@ -98,7 +98,7 @@
   }
 }
 
-.overview__btn {
+.top-overview__btn {
   margin: rem(26) auto 0;
   @include mq(md) {
     max-width: rem(360);
@@ -106,11 +106,11 @@
   }
 }
 
-.overview__btn:hover {
+.top-overview__btn:hover {
   @include mq(md) {
     color: $text-color;
   }
 }
-.overview__btn::before {
+.top-overview__btn::before {
   background-color: $white;
 }

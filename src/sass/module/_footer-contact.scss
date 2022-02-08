@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.contact__inner {
+.footer-contact__inner {
   margin-top: rem(120);
   padding: $padding-sp $padding-sp rem(64);
   background: #3D3D3D;
@@ -9,28 +9,28 @@
     padding: rem(54) $padding-pc rem(149);
   }
 }
-.contact__title{
+.footer-contact__title{
   margin-top: rem(-2);
   @include mq(md){
     margin-top: initial;
   }
 }
 
-.contact__subtitle{
+.footer-contact__subtitle{
   @include mq(md){
     padding-top: rem(51);
     margin-top: rem(-80);
   }
 }
 
-.contact__body{
+.footer-contact__body{
   margin-top: rem(18);
   @include mq(md){
     margin-top: rem(18);
     text-align: center;
   }
 }
-.contact__text{
+.footer-contact__text{
   color: $white;
   font-size: rem(16);
   line-height: 1.448125;
@@ -41,7 +41,7 @@
     padding-left: rem(2);
   }
 }
-.contact__btn{
+.footer-contact__btn{
   margin: rem(48) auto 0;
   @include mq(md){
     font-size: rem(20);
@@ -50,11 +50,11 @@
     margin: rem(61) auto 0;
   }
 }
-.contact__btn:hover {
+.footer-contact__btn:hover {
   @include mq(md) {
     color: $text-color;
   }
 }
-.contact__btn::before {
+.footer-contact__btn::before {
   background-color: $white;
 }

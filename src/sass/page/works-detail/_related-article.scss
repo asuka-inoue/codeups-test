@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.related-article {
+  margin-top: rem(120);
+}
+
+.related-article__contents {
+  margin-top: rem(32);
+  @include mq(md) {
+    gap: rem(48) rem(32);
+    margin-top: rem(80);
+  }
+  
+}
+
+.related-article__btn {
+  max-width: inherit;
+  padding: rem(8) 0;
+}
+
+.related-article__card {
+  @include mq(md) {
+    width: calc((100% - (#{rem(32)} * 3)) / 4);
+  }
+}
+
+.related-article__img {
+  @include mq(md) {
+    padding-top: 58.9641434%;
+  }
+}

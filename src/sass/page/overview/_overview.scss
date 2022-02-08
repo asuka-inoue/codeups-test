@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.overview {
+  margin-top: rem(85);
+  @include mq(md) {
+    margin-top: rem(115);
+  }
+}
+
+.overview__item {
+  display: flex;
+  padding: rem(14) 0 rem(19);
+  border-bottom: 1px solid $white;
+  @include mq(md) {
+    padding: rem(30) 0 rem(28);
+  }
+}
+
+.overview__term {
+  max-width: rem(57);
+  width: 100%;
+  padding-left: rem(5);
+  font-size: rem(13);
+  color: $white;
+  line-height: 1.84615385;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1.5;
+    max-width: rem(69);
+  }
+}
+
+.overview__description {
+  width: 100%;
+  margin-left: rem(57);
+  font-size: rem(13);
+  color: $white;
+  line-height: 1.84615385;
+}

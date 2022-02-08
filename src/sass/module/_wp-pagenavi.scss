@@ -73,10 +73,24 @@
 }
 
 .wp-pagenavi__prev:hover,
-.wp-pagenavi__next:hover {
+.wp-pagenavi__next:hover,
+.wp-pagenavi__more:hover {
   @include mq(md) {
     border: 1px solid $white;
     background: $white;
     color: $text-color;
   }
 }
+
+.wp-pagenavi__more {
+  width: rem(71);
+  height: rem(24);
+  border: 1px solid $white;
+  font-size: rem(16);
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: rem(23);
+}
+

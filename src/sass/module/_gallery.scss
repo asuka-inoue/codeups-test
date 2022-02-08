@@ -4,8 +4,8 @@
   width: 100%;
   margin-top: rem(16);
   @include mq(md) {
-    max-width: rem(849);
-    margin: auto;
+    max-width: rem(851);
+    margin: rem(32) auto 0;
     padding: 0 $padding-pc;
   }
 }
@@ -42,6 +42,10 @@
 	height: rem(30); /* ボタンの高さ */
   border-radius: 50%;
   background-color: $black;
+  @include mq(md) {
+    width: rem(50);
+    height: rem(50);
+  }
 }
 /* 前ページボタンのスタイル */
 .swiper-button-prev:before,
@@ -53,6 +57,9 @@
   right: 37%;
   border-radius: 30px;
   background-color: #FFEA2E;
+  @include mq(md) {
+    width: rem(16);
+  }
 }
 
 .swiper-button-next:before,
@@ -64,6 +71,9 @@
   right: 28%;
   border-radius: 30px;
   background-color: #FFEA2E;
+  @include mq(md) {
+    width: rem(16);
+  }
 }
 /* 次ページボタンのスタイル */
 .swiper-button-prev:before {
@@ -93,6 +103,9 @@
   padding: 0;
   margin-top: rem(32);
   overflow: hidden;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 
   .swiper-slide {
     position: relative;
@@ -125,4 +138,28 @@
     transform: translate(-50%, -50%);
     object-fit: cover;
   }
+}
+
+.gallery__img {
+  position: relative;
+}
+
+.gallery__img::before {
+  position: relative;
+  content: "";
+  display: block;
+  padding-top: 66.9333333%;
+  @include mq(md) {
+    padding-top: 53.4418023%;
+  }
+}
+
+.gallery__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
