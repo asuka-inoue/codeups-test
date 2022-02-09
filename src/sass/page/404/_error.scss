@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.error {
+  margin-top: rem(130);
+  padding-bottom: rem(120);
+  @include mq(md) {
+    margin-top: rem(200);
+    padding-bottom: rem(150);
+  }
+}
+
+.error__items {
+  text-align: center;
+  color: $white;
+  
+}
+
+.error__title {
+  font-size: rem(40);
+  font-weight: $normal;
+  letter-spacing: 2px;
+  color: #FFEA2E;
+  opacity: .3;
+  @include mq(md) {
+    font-size: rem(60);
+  }
+}
+
+.error__text {
+  margin-top: rem(80);
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing: 2px;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.error__btn {
+  margin-top: rem(80);
+  text-transform: uppercase;
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing: 2px;
+  @include mq(md) {
+    margin: rem(80) auto 0;
+  }
+}
