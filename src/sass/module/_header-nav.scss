@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.header-nav {
+  display: none;
+  @include mq(md) {
+    display: block;
+    height: inherit;
+  }
+}
+
+.header-nav__lists {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.header-nav__list + .header-nav__list {
+  margin-left: rem(30);
+}
+
+.header-nav__list a {
+  position: relative;
+  color: $white;
+  letter-spacing: 2px;
+  padding: rem(13) 0;
+}
+
+.header-nav__list a::after {
+  content: "";
+  position: absolute;
+  bottom: rem(8);
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  background: #ffea2e;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+.header-nav__list a:hover::after {
+  @include mq(md) {
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: all .3s;
+  }
+}
+
+.header-nav__list--white {
+  background: $white;
+  height: inherit;
+  transition: all .3s;
+}
+
+.header-nav__list--white a {
+  color: $black;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 rem(31);
+}
+
+.header-nav__list--white a:hover {
+  @include mq(md) {
+    transition: all .3s;
+    background: $text-color;
+    color: $white;
+  }
+}
+
+.header-nav__list--white a:hover::after {
+  @include mq(md){
+    display: none;
+  }
+}

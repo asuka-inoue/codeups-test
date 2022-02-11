@@ -44,71 +44,7 @@
   display: block;
   padding: rem(8) 0 rem(4);
 }
-.header__nav{
-  display: none;
-  @include mq(md){
-    display: block;
-    height: inherit;
-  }
-}
-.header__lists{
-  display: flex;
-  align-items: center;
-  height: inherit;
-}
-.header__list + .header__list{
-  margin-left: rem(30);
-}
-.header__link{
-  position: relative;
-  color: $white;
-  letter-spacing: 2px;
-  padding: rem(13) 0;
-}
-.header__link::after{
-  content: "";
-  position: absolute;
-  bottom: rem(8);
-  left: 0;
-  width: 100%;
-  height: rem(1);
-  background: #FFEA2E;
-  transition: all .3s;
-  transform: scale(0, 1);
-  transform-origin: center top;
-}
-.header__link:hover::after{
-  @include mq(md) {
-    opacity: 1;
-    transform: scale(1, 1);
-    transition: all .3s;
-  }
-}
-.header__list--white{
-  background: $white;
-  height: inherit;
-  transition: all .3s;
-}
-.header__list--white .header__link{
-  color: $black;
-  height: inherit;
-  display: flex;
-  align-items: center;
-  padding: 0 rem(31);
-}
-.header__list--white:hover {
-  @include mq(md) {
-    transition: all .3s;
-    background: $text-color;
-    .header__link{
-      color: $white;
-    }
-    .header__link::after{
-      display: none;
-    }
-  }
-  
-}
+
 .header__btn{
   position: relative;
   width: rem(26);
@@ -153,46 +89,3 @@
   transform: translateY(rem(-6)) rotate(45deg);
   }
 
-//スライドメニュー
-.header__spnav {
-  display: block;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  transform: translateX(100vw);
-  transition: all .3s;
-  background-color: $black;
-  @include mq(md) {
-    display: none;
-  }
-}
-.header__splists {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  margin-top: rem(208);
-  overflow: scroll;
-}
-.header__splist {
-  list-style: none;
-  text-align: center;
-  padding-left: rem(4);
-}
-.header__splist + .header__splist {
-  padding-top: rem(31);
-}
-.header__splink {
-  font-size: rem(16);
-  text-decoration: none;
-  letter-spacing: 2px;
-  color: $white;
-}
-//activeクラスをつけたら、スライドイン
-.header__spnav.is-active {
-  transform: translateX(0);
-}

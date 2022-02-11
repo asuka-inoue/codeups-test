@@ -3,26 +3,32 @@
 .main-view__wrap{
   position: relative;
 }
-.main-view__title{
+
+.main-view__wrapper {
   width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   padding: 0 rem(16);
+  text-align: center;
+  z-index: 2;
+}
+
+.main-view__title{
   color: $white;
   font-size: rem(28);
   font-weight: $bold;
-  text-align: center;
   line-height: 1;
   letter-spacing: rem(0.5);
-  z-index: 2;
   @include mq(md){
     font-size: rem(50);
   }
 }
-.main-view__title span{
+.main-view__subtitle{
   display: block;
   font-size: rem(20);
+  font-weight: $bold;
+  color: $white;
   padding-top: rem(24);
   @include mq(md){
     font-size: rem(25);

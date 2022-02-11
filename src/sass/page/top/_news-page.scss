@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.news-page {
+  padding-top: rem(85);
+  @include mq(md) {
+    padding-top: rem(69);
+  } 
+}

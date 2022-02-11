@@ -35,7 +35,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".js-hamburger-nav").removeClass("is-active");
       }
     });
-    $(".js-link").click(function () {
+    $(".js-hamburger-nav a").click(function () {
       $(".js-hamburger-nav,.js-hamburger").removeClass("is-active");
     });
   
@@ -44,9 +44,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   
     $(window).scroll(function () {
       if ($(window).scrollTop() > mainPos) {
-        $(".header").addClass("addColor");
+        $(".js-header").addClass("addColor");
       } else {
-        $(".header").removeClass("addColor");
+        $(".js-header").removeClass("addColor");
       }
     });
   

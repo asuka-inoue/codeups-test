@@ -1,15 +1,24 @@
 @use "global" as *;
 
-.top-news__inner {
-  padding-top: rem(23);
+
+.top-news {
+  margin-top: rem(23);
   @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+.top-news__inner {
+  @include mq(md) {
+    max-width: rem(1092);
+    width: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
-    padding: rem(32) rem(54) 0;
+    padding: 0 $padding-pc;
   }
 }
 
-.top-news__link {
+.top-news__title a {
   @include mq(md) {
     &:hover {
       color: $white;

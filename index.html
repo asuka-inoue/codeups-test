@@ -31,7 +31,7 @@
   <script defer src="./js/script.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header js-header">
     <div class="header__inner">
       <h1 class="header__title">
         <a href="#" class="header__logo">
@@ -39,14 +39,14 @@
         </a><!-- /.header__logo -->
       </h1><!-- /.header__title -->
       <!--ナビゲーション-->
-      <nav class="header__nav">
-        <ul class="header__lists">
-          <li class="header__list"><a class="header__link" href="./news/index.html">お知らせ</a></li>
-          <li class="header__list"><a class="header__link" href="./content/index.html">事業内容</a></li>
-          <li class="header__list"><a class="header__link" href="./works/index.html">制作実績</a></li>
-          <li class="header__list"><a class="header__link" href="#overview">企業概要</a></li>
-          <li class="header__list"><a class="header__link" href="./blog/index.html">ブログ</a></li>
-          <li class="header__list header__list--white"><a class="header__link" href="#contact">お問い合わせ</a></li>
+      <nav class="header-nav">
+        <ul class="header-nav__lists">
+          <li class="header-nav__list"><a href="./news/index.html">お知らせ</a></li>
+          <li class="header-nav__list"><a href="./content/index.html">事業内容</a></li>
+          <li class="header-nav__list"><a href="./works/index.html">制作実績</a></li>
+          <li class="header-nav__list"><a href="#overview">企業概要</a></li>
+          <li class="header-nav__list"><a href="./blog/index.html">ブログ</a></li>
+          <li class="header-nav__list header-nav__list--white"><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
       <!--hamburgerボタンー-->
@@ -56,28 +56,28 @@
         <span></span>
       </div>
       <!--hamburgerメニュー-->
-      <nav class="header__spnav js-hamburger-nav">
-        <ul class="header__splists">
-          <li class="header__splist">
-            <a class="header__splink js-link" href="#">トップ</a>
+      <nav class="header-spnav js-hamburger-nav">
+        <ul class="header-spnav__lists">
+          <li class="header-spnav__list">
+            <a href="#">トップ</a>
           </li>
-          <li class="header__splist">
-            <a class="header__splink js-link" href="./news/index.html">お知らせ</a>
+          <li class="header-spnav__list">
+            <a href="./news/index.html">お知らせ</a>
           </li>
-          <li class="header__splist">
-            <a class="header__splink js-link" href="./content/index.html">事業内容</a>
+          <li class="header-spnav__list">
+            <a href="./content/index.html">事業内容</a>
           </li>
-          <li class="header__splist">
-            <a class="header__splink js-link" href="./works/index.html">制作実績</a>
+          <li class="header-spnav__list">
+            <a href="./works/index.html">制作実績</a>
           </li>
-          <li class="header__splist">
-            <a class="header__splink js-link" href="#overview">企業概要</a>
+          <li class="header-spnav__list">
+            <a href="#overview">企業概要</a>
           </li>
-          <li class="header__splist">
-            <a class="header__splink js-link" href="./blog/index.html">ブログ</a>
+          <li class="header-spnav__list">
+            <a href="./blog/index.html">ブログ</a>
           </li>
-          <li class="header__splist">
-            <a class="header__splink js-link" href="#contact">お問い合わせ</a>
+          <li class="header-spnav__list">
+            <a href="#contact">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -87,8 +87,11 @@
   <main>
     <div class="main-view">
       <div class="main-view__wrap">
-        <h2 class="main-view__title">メインタイトルが入ります<br>
-        <span class="main-view__subtitle">サブタイトルが入ります</span></h2><!-- /.main-view__title -->
+        <div class="main-view__wrapper">
+          <h2 class="main-view__title">メインタイトルが入ります</h2><!-- /.main-view__title -->
+          <span class="main-view__subtitle">サブタイトルが入ります</span>
+        </div><!-- /.main-view__wrapper -->
+        
         <div class="swiper swiper1">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -114,16 +117,18 @@
       </div>
     </div><!-- /.main-view -->
 
-    <section class="top-news news" id="news">
+    <section class="news top-news" id="news">
       <div class="top-news__inner inner">
-        <div class="news__info post-info">
+        <div class="top-news__info post-info">
           <time class="post-info__date" datetime="2020-07-20">2020.07.20</time>
           <p class="post-info__category">お知らせ</p>
         </div><!-- /.top-news__head -->
-        <h3 class="news__title">
-          <a href="" class="top-news__link news__link">記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。</a><!-- /.top-news__title-link -->
+        <h3 class="news__title top-news__title">
+          <a href="#">記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。</a><!-- /.top-news__title-link -->
         </h3><!-- /.top-news__title -->
-        <a href="./news/index.html" class="btn top-news__btn">すべて見る</a><!-- /.top-news__btn -->
+        <div class="top-news__btn btn">
+          <a href="./news/index.html">すべて見る</a><!-- /.top-news__btn -->
+        </div><!-- /.top-news__btn -->
       </div><!-- /.top-news__inner -->
     </section><!-- /.top-news -->
 
