@@ -1,18 +1,6 @@
 @use "global" as *;
 
-.top-works__inner {
-  margin-top: rem(71);
-  @include mq(md) {
-    margin-top: rem(149);
-  }
-}
-
-.top-works__title {
-  @include mq(md) {
-    text-align: right;
-  }
-}
-.top-works__subtitle {
+.top-works__title span {
   @include mq(md) {
     padding-top: rem(12);
     letter-spacing: 0.5px;
@@ -85,18 +73,10 @@
 }
 
 .top-works__btn{
-  margin: rem(25) auto 0;
+  margin-top: rem(25);
+  text-align: center;
   @include mq(md) {
     max-width: rem(360);
-    margin: rem(47) 0 0;
+    margin-top: rem(47);
   }
-}
-
-.top-works__btn:hover {
-  @include mq(md) {
-    color: $text-color;
-  }
-}
-.top-works__btn::before {
-  background-color: $white;
 }

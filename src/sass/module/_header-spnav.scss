@@ -16,6 +16,7 @@
     display: none;
   }
 }
+
 .header-spnav__lists {
   display: flex;
   flex-direction: column;
@@ -25,14 +26,17 @@
   margin-top: rem(208);
   overflow: scroll;
 }
+
 .header-spnav__list {
   list-style: none;
   text-align: center;
   padding-left: rem(4);
 }
+
 .header-spnav__list + .header-spnav__list {
   padding-top: rem(31);
 }
+
 .header-spnav__list a {
   font-size: rem(16);
   text-decoration: none;

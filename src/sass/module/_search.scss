@@ -1,16 +1,15 @@
 @use "global" as *;
 
-.search__wrap {
+.search {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: rem(83);
   gap: rem(15) rem(25);
   @include mq(md) {
-    margin-top: rem(113);
     gap: 0 rem(41);
   }
 }
+
 .search__item {
   display: inline-block;
   font-size: rem(16);

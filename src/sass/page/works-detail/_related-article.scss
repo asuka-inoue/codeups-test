@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.related-article {
-  margin-top: rem(120);
-}
-
 .related-article__contents {
   margin-top: rem(32);
   @include mq(md) {
@@ -13,7 +9,7 @@
   
 }
 
-.related-article__btn {
+.related-article__btn .btn {
   max-width: inherit;
   padding: rem(8) 0;
 }

@@ -87,39 +87,39 @@
   <main>
     <div class="page-title main-view">
       <div class="page-title__wrap">
-        <img src="../images/common/sp-overview-mv.jpg" alt="" class="u-mobile">
-        <img src="../images/common/overview-mv.jpg" alt="" class="u-desktop">
+        <picture>
+          <source media="(min-width: 768px)" srcset="../images/common/overview-mv.jpg">
+          <img src="../images/common/sp-overview-mv.jpg" alt="企業概要">
+        </picture>
         <h2 class="page-title__title">企業概要</h2>
       </div><!-- /.page-title__wrapper -->
     </div><!-- /.page-title -->
 
-    <div class="inner">
-      <!-- ぱんくず -->
-      <div id="breadcrumbs">
-        <div class="bc_inner">
-          <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <!-- 1つめ -->
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
-            itemtype="https://schema.org/ListItem">
-              <a class="breadcrumbs__link" itemprop="item" href="../index.html">
-                <span itemprop="name">トップ</span>
-              </a>
-              <meta itemprop="position" content="1" />
-            </li>           
-            <!-- 2つめ -->
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
-                    itemtype="https://schema.org/ListItem">
-              <a class="breadcrumbs__link" itemprop="item" href="#">
-                <span itemprop="name">企業概要</span>
-              </a>
-                <meta itemprop="position" content="2" />
-            </li>
-          </ol>
-        </div>
+    <!-- ぱんくず -->
+    <div id="breadcrumbs" class="page-breadcrumbs">
+      <div class="bc_inner inner">
+        <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <!-- 1つめ -->
+          <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="../index.html">
+              <span itemprop="name">トップ</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>           
+          <!-- 2つめ -->
+          <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="#">
+              <span itemprop="name">企業概要</span>
+            </a>
+              <meta itemprop="position" content="2" />
+          </li>
+        </ol>
       </div>
-    </div><!-- /.inner -->
+    </div>
 
-    <section class="overview">
+    <section class="overview section-overview">
       <div class="overview__inner inner">
         <dl class="overview__items">
           <div class="overview__item">
@@ -156,15 +156,17 @@
           </div><!-- /.overview__item -->
         </dl>
       </div><!-- /.inner -->
-      <div class="map">
+      <div class="overview__map map">
         <div class="map__inner">
-          <img src="../images/common/sp-map.jpg" alt="" class="u-mobile">
-          <img src="../images/common/map.jpg" alt="" class="u-desktop">
+          <picture>
+            <source media="(min-width: 768px)" srcset="../images/common/map.jpg">
+            <img src="../images/common/sp-map.jpg" alt="map">
+          </picture>
         </div><!-- /.map__inner -->
       </div><!-- /.map -->
     </section><!-- /.overview -->
     
-    <section class="footer-contact" id="contact">
+    <section class="footer-contact section-footercontact">
       <div class="footer-contact__inner">
         <div class="section-header">
           <h2 class="section-header__title footer-contact__title">contact</h2><!-- /.section-header__title -->

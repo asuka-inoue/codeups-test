@@ -39,14 +39,14 @@
         </a><!-- /.header__logo -->
       </h1><!-- /.header__title -->
       <!--ナビゲーション-->
-      <nav class="header-nav">
+      <nav class="header__nav header-nav">
         <ul class="header-nav__lists">
           <li class="header-nav__list"><a href="./news/index.html">お知らせ</a></li>
           <li class="header-nav__list"><a href="./content/index.html">事業内容</a></li>
           <li class="header-nav__list"><a href="./works/index.html">制作実績</a></li>
-          <li class="header-nav__list"><a href="#overview">企業概要</a></li>
+          <li class="header-nav__list"><a href="./overview/index.html">企業概要</a></li>
           <li class="header-nav__list"><a href="./blog/index.html">ブログ</a></li>
-          <li class="header-nav__list header-nav__list--white"><a href="#contact">お問い合わせ</a></li>
+          <li class="header-nav__list header-nav__list--white"><a href="./contact/index.html">お問い合わせ</a></li>
         </ul>
       </nav>
       <!--hamburgerボタンー-->
@@ -56,7 +56,7 @@
         <span></span>
       </div>
       <!--hamburgerメニュー-->
-      <nav class="header-spnav js-hamburger-nav">
+      <nav class="header__spnav header-spnav js-hamburger-nav">
         <ul class="header-spnav__lists">
           <li class="header-spnav__list">
             <a href="#">トップ</a>
@@ -71,13 +71,13 @@
             <a href="./works/index.html">制作実績</a>
           </li>
           <li class="header-spnav__list">
-            <a href="#overview">企業概要</a>
+            <a href="./overview/index.html">企業概要</a>
           </li>
           <li class="header-spnav__list">
             <a href="./blog/index.html">ブログ</a>
           </li>
           <li class="header-spnav__list">
-            <a href="#contact">お問い合わせ</a>
+            <a href="./contact/index.html">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -92,24 +92,30 @@
           <span class="main-view__subtitle">サブタイトルが入ります</span>
         </div><!-- /.main-view__wrapper -->
         
-        <div class="swiper swiper1">
+        <div class="swiper swiper1 js-top">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="slide-img">
-                <img class="u-mobile" src="./images/common/sp-main-view1.jpg" alt="main-view1">
-                <img class="u-desktop" src="./images/common/main-view1.jpg" alt="main-view1">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./images/common/main-view1.jpg">
+                  <img src="./images/common/sp-main-view1.jpg" alt="main-view1">
+                </picture>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="slide-img">
-                <img class="u-mobile" src="./images/common/sp-main-view2.jpg" alt="main-view2">
-                <img class="u-desktop" src="./images/common/main-view2.jpg" alt="main-view2">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./images/common/main-view2.jpg">
+                  <img src="./images/common/sp-main-view2.jpg" alt="main-view2">
+                </picture>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="slide-img">
-                <img class="u-mobile" src="./images/common/sp-main-view3.jpg" alt="main-view3">
-                <img class="u-desktop" src="./images/common/main-view3.jpg" alt="main-view3">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./images/common/main-view3.jpg">
+                  <img src="./images/common/sp-main-view3.jpg" alt="main-view3">
+                </picture>
               </div>
             </div>
           </div>
@@ -117,7 +123,7 @@
       </div>
     </div><!-- /.main-view -->
 
-    <section class="news top-news" id="news">
+    <section class="news top-news">
       <div class="top-news__inner inner">
         <div class="top-news__info post-info">
           <time class="post-info__date" datetime="2020-07-20">2020.07.20</time>
@@ -126,122 +132,120 @@
         <h3 class="news__title top-news__title">
           <a href="#">記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。</a><!-- /.top-news__title-link -->
         </h3><!-- /.top-news__title -->
-        <div class="top-news__btn btn">
-          <a href="./news/index.html">すべて見る</a><!-- /.top-news__btn -->
+        <div class="top-news__btn">
+          <a href="./news/index.html" class="btn">すべて見る</a><!-- /.top-news__btn -->
         </div><!-- /.top-news__btn -->
       </div><!-- /.top-news__inner -->
     </section><!-- /.top-news -->
 
     <div class="line__one">
 
-    <section class="top-content" id="top-">
-      <div class="top-content__inner">
-        <div class="section-header">
-          <h2 class="section-header__title top-content__title">content</h2><!-- /.section-header__title -->
-          <span class="section-header__subtitle top-content__subtitle">事業内容</span><!-- /.section-header__subtitle -->
-        </div><!-- /.section-header -->
-        <div class="top-content__wrapper">
-          <a href="./content/index.html" class="top-content__link">
-            <img src="./images/common/content1.jpg" alt="事業内容1">
-            <h3 class="top-content__linkttl">経営理念ページへ</h3>
-          </a><!-- /.top-content__link -->
-          <a href="./content/index.html" class="top-content__link">
-            <img src="./images/common/content2.jpg" alt="事業内容2">
-            <h3 class="top-content__linkttl">理念1へ</h3>
-          </a><!-- /.top-content__link -->
-          <a href="./content/index.html" class="top-content__link">
-            <img src="./images/common/content3.jpg" alt="事業内容3">
-            <h3 class="top-content__linkttl">理念2へ</h3>
-          </a><!-- /.top-content__link -->
-          <a href="./content/index.html" class="top-content__link">
-            <img src="./images/common/content4.jpg" alt="事業内容4">
-            <h3 class="top-content__linkttl">理念3へ</h3>
-          </a><!-- /.top-content__link -->
-        </div><!-- /.top-content__wrapper -->
-      </div><!-- /.top-content__inner -->
+    <section class="top-content section-topcontent">
+      <div class="top-content__title section-header">
+        <h2 class="section-header__title">content</h2><!-- /.section-header__title -->
+        <span class="section-header__subtitle">事業内容</span><!-- /.section-header__subtitle -->
+      </div><!-- /.section-header -->
+      <div class="top-content__wrapper">
+        <a href="./content/index.html" class="top-content__link">
+          <img src="./images/common/content1.jpg" alt="事業内容1">
+          <h3 class="top-content__linktitle">経営理念ページへ</h3>
+        </a><!-- /.top-content__link -->
+        <a href="./content/index.html" class="top-content__link">
+          <img src="./images/common/content2.jpg" alt="事業内容2">
+          <h3 class="top-content__linktitle">理念1へ</h3>
+        </a><!-- /.top-content__link -->
+        <a href="./content/index.html" class="top-content__link">
+          <img src="./images/common/content3.jpg" alt="事業内容3">
+          <h3 class="top-content__linktitle">理念2へ</h3>
+        </a><!-- /.top-content__link -->
+        <a href="./content/index.html" class="top-content__link">
+          <img src="./images/common/content4.jpg" alt="事業内容4">
+          <h3 class="top-content__linktitle">理念3へ</h3>
+        </a><!-- /.top-content__link -->
+      </div><!-- /.top-content__wrapper -->
     </section><!-- /.top-content -->
 
     </div><!-- /.line__one -->
 
     <div class="line__two">
 
-    <section class="top-works" id="works">
-      <div class="top-works__inner">
-        <div class="section-header">
-          <h2 class="section-header__title top-works__title">works</h2><!-- /.section-header__title -->
-          <span class="section-header__subtitle top-works__subtitle">制作実績</span><!-- /.section-header__subtitle -->
-        </div><!-- /.section-header -->
-        <div class="top-works__wrapper">
-          <div class="top-works__body">
-            <div class="swiper swiper2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide-img">
-                    <img src="./images/common/works1.jpg" alt="制作実績1">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-img">
-                    <img src="./images/common/works2.jpg" alt="制作実績2">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-img">
-                    <img src="./images/common/works3.jpg" alt="制作実績3">
-                  </div>
+    <section class="top-works section-topworks">
+      <div class="top-works__title section-header">
+        <h2 class="section-header__title section-header__title--right">works</h2><!-- /.section-header__title -->
+        <span class="section-header__subtitle">制作実績</span><!-- /.section-header__subtitle -->
+      </div><!-- /.section-header -->
+      <div class="top-works__wrapper">
+        <div class="top-works__body">
+          <div class="swiper swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./images/common/works1.jpg" alt="制作実績1">
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./images/common/works2.jpg" alt="制作実績2">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./images/common/works3.jpg" alt="制作実績3">
+                </div>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+          </div>
 
-            <div class="top-works__content">
-              <h3 class="top-works__contentttl">メインタイトルが入ります。</h3><!-- /.top-works__title -->
-              <div class="top-works__textblock">
-                <p class="top-works__text">
-                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                </p><!-- /.top-works__text -->
-              </div><!-- /.top-works__textblock -->
-              <a href="./works/index.html" class="btn top-works__btn">詳しく見る</a><!-- /.top-works__btn -->
-            </div><!-- /.top-works__content -->
-          </div><!-- /.top-works__body -->
-        </div><!-- /.top-works__wrapper -->
-      </div><!-- /.top-works__inner -->
+          <div class="top-works__content">
+            <h3 class="top-works__contenttitle">メインタイトルが入ります。</h3><!-- /.top-works__title -->
+            <div class="top-works__textblock">
+              <p class="top-works__text">
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p><!-- /.top-works__text -->
+            </div><!-- /.top-works__textblock -->
+            <div class="top-works__btn">
+              <a href="./works/index.html" class="btn">詳しく見る</a><!-- /.top-works__btn -->
+            </div><!-- /.top-works__btn -->
+          </div><!-- /.top-works__content -->
+        </div><!-- /.top-works__body -->
+      </div><!-- /.top-works__wrapper -->
     </section><!-- /.top-works -->
 
-    <section class="top-overview" id="overview">
-      <div class="top-overview__inner">
-        <div class="section-header">
-          <h2 class="section-header__title top-overview__title">overview</h2><!-- /.section-header__title -->
-          <span class="section-header__subtitle top-overview__subtitle">企業概要</span><!-- /.section-header__subtitle -->
-        </div><!-- /.section-header -->
-        <div class="top-overview__wrapper">
-          <div class="top-overview__body">
-            <div class="top-overview__img">
-              <img src="./images/common/overview.jpg" alt="企業概要">
-            </div><!-- /.top-overview__img -->
+    <section class="top-overview section-topoverview">
+      <div class="top-overview__title section-header">
+        <h2 class="section-header__title">overview</h2><!-- /.section-header__title -->
+        <span class="section-header__subtitle">企業概要</span><!-- /.section-header__subtitle -->
+      </div><!-- /.section-header -->
+      <div class="top-overview__wrapper">
+        <div class="top-overview__body">
+          <div class="top-overview__img">
+            <img src="./images/common/overview.jpg" alt="企業概要">
+          </div><!-- /.top-overview__img -->
 
-            <div class="top-overview__content">
-              <h3 class="top-overview__contentttl">メインタイトルが入ります。</h3><!-- /.top-overview__contentttl -->
-              <div class="top-overview__textblock">
-                <p class="top-overview__text">
-                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                </p><!-- /.top-overview__text -->
-              </div><!-- /.top-overview__textblock -->
-              <a href="#" class="btn top-overview__btn">詳しく見る</a><!-- /.top-overview__btn -->
-            </div><!-- /.top-overview__content -->
-          </div><!-- /.top-overview__body -->
-        </div>
-      </div><!-- /.top-overview__inner -->
+          <div class="top-overview__content">
+            <h3 class="top-overview__contentttl">メインタイトルが入ります。</h3><!-- /.top-overview__contentttl -->
+            <div class="top-overview__textblock">
+              <p class="top-overview__text">
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p><!-- /.top-overview__text -->
+            </div><!-- /.top-overview__textblock -->
+            <div class="top-overview__btn">
+              <a href="#" class="btn">詳しく見る</a><!-- /.top-overview__btn -->
+            </div><!-- /.top-overview__btn -->
+          </div><!-- /.top-overview__content -->
+        </div><!-- /.top-overview__body -->
+      </div>
     </section><!-- /.top-overview -->
 
-    <section class="top-blog" id="top-blog">
+    <section class="top-blog section-topblog">
       <div class="top-blog__inner">
-        <div class="section-header">
-          <h2 class="section-header__title top-blog__title">blog</h2><!-- /.section-header__title -->
-          <span class="section-header__subtitle top-blog__subtitle">ブログ</span><!-- /.section-header__subtitle -->
+        <div class="top-blog__title section-header">
+          <h2 class="section-header__title section-header__title--right">blog</h2><!-- /.section-header__title -->
+          <span class="section-header__subtitle">ブログ</span><!-- /.section-header__subtitle -->
         </div><!-- /.section-header -->
-        <div class="top-blog__contents card__lists">
-          <a href="#" class="card top-blog__content--new">
+        <div class="top-blog__contents cards">
+          <a href="#" class="cards__item card card--new">
             <figure class="card__img">
               <img src="./images/common/blog1.jpg" alt="ブログ1">
             </figure><!-- /.card__img -->
@@ -258,7 +262,7 @@
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
           </a><!-- /.top-blog__content -->
-          <a href="#" class="card">
+          <a href="#" class="cards__item card">
             <figure class="card__img">
               <img src="./images/common/blog2.jpg" alt="ブログ2">
             </figure><!-- /.card__img -->
@@ -275,7 +279,7 @@
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
           </a><!-- /.top-blog__content -->
-          <a href="#" class="card">
+          <a href="#" class="cards__item card">
             <figure class="card__img">
               <img src="./images/common/blog3.jpg" alt="ブログ3">
             </figure><!-- /.card__img -->
@@ -293,22 +297,26 @@
             </div><!-- /.card__body -->
           </a><!-- /.top-blog__content -->
         </div><!-- /.top-blog__contents -->
-        <a href="./blog/index.html" class="btn top-blog__btn">詳しく見る</a><!-- /.btn -->
+        <div class="top-blog__btn">
+          <a href="./blog/index.html" class="btn">詳しく見る</a><!-- /.btn -->
+        </div><!-- /.top-blog__btn -->
       </div><!-- /.top-blog__inner -->
     </section><!-- /.top-blog -->
   </div>
 
-    <section class="footer-contact" id="contact">
+    <section class="footer-contact section-footercontact">
       <div class="footer-contact__inner">
-        <div class="section-header">
-          <h2 class="section-header__title footer-contact__title">contact</h2><!-- /.section-header__title -->
-          <span class="section-header__subtitle footer-contact__subtitle">お問い合わせ</span><!-- /.section-header__subtitle -->
+        <div class="footer-contact__title section-header">
+          <h2 class="section-header__title">contact</h2><!-- /.section-header__title -->
+          <span class="section-header__subtitle">お問い合わせ</span><!-- /.section-header__subtitle -->
         </div><!-- /.section-header -->
         <div class="footer-contact__body">
           <p class="footer-contact__text">
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p><!-- /.footer-contact__text -->
-          <a href="#" class="btn footer-contact__btn">お問い合わせへ</a><!-- /.btn -->
+          <div class="footer-contact__btn">
+            <a href="#" class="btn">お問い合わせへ</a><!-- /.btn -->
+          </div><!-- /.footer-contact__btn -->
         </div><!-- /.footer-contact__body -->
       </div><!-- /.footer-contact__inner -->
     </section><!-- /.footer-contact -->
@@ -324,27 +332,27 @@
         <nav class="footer__nav">
           <ul class="footer__lists">
             <li class="footer__list">
-              <a href="./content/index.html" class="footer__link">
+              <a href="./content/index.html">
                 事業内容
               </a><!-- /.footer__link -->
             </li><!-- /.footer__list -->
             <li class="footer__list">
-              <a href="./works/index.html" class="footer__link">
+              <a href="./works/index.html">
                 制作実績
               </a><!-- /.footer__link -->
             </li><!-- /.footer__list -->
             <li class="footer__list">
-              <a href="./overview/index.html" class="footer__link">
+              <a href="./overview/index.html">
                 企業概要
               </a><!-- /.footer__link -->
             </li><!-- /.footer__list -->
             <li class="footer__list">
-              <a href="#" class="footer__link">
+              <a href="#">
                 自社メディア
               </a><!-- /.footer__link -->
             </li><!-- /.footer__list -->
             <li class="footer__list">
-              <a href="./contact/index.html" class="footer__link">
+              <a href="./contact/index.html">
                 お問い合わせ
               </a><!-- /.footer__link -->
             </li><!-- /.footer__list -->

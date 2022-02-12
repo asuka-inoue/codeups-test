@@ -87,39 +87,39 @@
   <main>
     <div class="page-title main-view">
       <div class="page-title__wrap">
-        <img src="../images/common/sp-contact-mv.jpg" alt="" class="u-mobile">
-        <img src="../images/common/contact-mv.jpg" alt="" class="u-desktop">
+        <picture>
+          <source media="(min-width: 768px)" srcset="../images/common/contact-mv.jpg">
+          <img src="../images/common/sp-contact-mv.jpg" alt="お問い合わせ">
+        </picture>
         <h2 class="page-title__title">お問い合わせ</h2>
       </div><!-- /.page-title__wrapper -->
     </div><!-- /.page-title -->
 
-    <div class="inner">
-      <!-- ぱんくず -->
-      <div id="breadcrumbs">
-        <div class="bc_inner">
-          <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <!-- 1つめ -->
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
-            itemtype="https://schema.org/ListItem">
-              <a class="breadcrumbs__link" itemprop="item" href="../index.html">
-                <span itemprop="name">トップ</span>
-              </a>
-              <meta itemprop="position" content="1" />
-            </li>           
-            <!-- 2つめ -->
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
-                    itemtype="https://schema.org/ListItem">
-              <a class="breadcrumbs__link" itemprop="item" href="#">
-                <span itemprop="name">お問い合わせ</span>
-              </a>
-                <meta itemprop="position" content="2" />
-            </li>
-          </ol>
-        </div>
+    <!-- ぱんくず -->
+    <div id="breadcrumbs" class="page-breadcrumbs" class="page-breadcrumbs">
+      <div class="bc_inner inner">
+        <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <!-- 1つめ -->
+          <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="../index.html">
+              <span itemprop="name">トップ</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>           
+          <!-- 2つめ -->
+          <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="#">
+              <span itemprop="name">お問い合わせ</span>
+            </a>
+              <meta itemprop="position" content="2" />
+          </li>
+        </ol>
       </div>
-    </div><!-- /.inner -->
+    </div>
 
-    <section class="contact">
+    <section class="contact section-contact">
       <div class="contact__inner inner">
         <form action="" class="contact__form">
           <div class="contact__error-message">※必要事項を入力してください</div>
@@ -150,22 +150,8 @@
       </div>
     </section><!-- /.contact -->
     
-    <section class="footer-contact" id="contact">
-      <div class="footer-contact__inner">
-        <div class="section-header">
-          <h2 class="section-header__title footer-contact__title">contact</h2><!-- /.section-header__title -->
-          <span class="section-header__subtitle footer-contact__subtitle">お問い合わせ</span><!-- /.section-header__subtitle -->
-        </div><!-- /.section-header -->
-        <div class="footer-contact__body">
-          <p class="footer-contact__text">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          </p><!-- /.footer-contact__text -->
-          <a href="#" class="btn footer-contact__btn">お問い合わせへ</a><!-- /.btn -->
-        </div><!-- /.footer-contact__body -->
-      </div><!-- /.footer-contact__inner -->
-    </section><!-- /.footer-contact -->
   </main>
-  <footer class="footer">
+  <footer class="footer contact-footer">
     <div class="footer__inner">
       <div class="footer__wrapper">
         <div class="footer__title">

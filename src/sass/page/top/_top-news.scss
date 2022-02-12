@@ -7,6 +7,7 @@
     margin-top: rem(32);
   }
 }
+
 .top-news__inner {
   @include mq(md) {
     max-width: rem(1092);
@@ -28,10 +29,17 @@
 }
 
 .top-news__btn {
-  margin: rem(28) auto 0;
+  margin-top: rem(28);
+  text-align: center;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.top-news__btn .btn {
   @include mq(md) {
     max-width: rem(134);
-    margin: 0 0 0 rem(48);
+    margin-left: rem(48);
     font-size: rem(16);
     letter-spacing: 0;
     background: $white;
@@ -43,6 +51,7 @@
     }
   }
 }
-.top-news__btn::before {
+
+.top-news__btn .btn::before {
   background-color: $text-color;
 }

@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .works__search {
-  padding: 0 $padding-sp 0;
+  padding: 0 $padding-sp;
   @include mq(md) {
-    padding: rem(115) $padding-pc 0;
+    padding: 0 $padding-pc;
     max-width: rem(1140);
     width: 100%;
     margin: auto;
@@ -11,12 +11,12 @@
 }
 
 .works__inner{
-  padding-top: rem(17);
+  margin-top: rem(17);
   @include mq(md) {
-    padding: rem(40) $padding-pc 0;
+    padding: 0 $padding-pc;
     max-width: rem(1150);
     width: 100%;
-    margin: auto;
+    margin: rem(40) auto 0;
   }
 }
 

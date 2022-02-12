@@ -1,31 +1,35 @@
 @use "global" as *;
 
-.footer__inner{
+.footer__inner {
   padding: rem(50) 0;
-  @include mq(md){
+  @include mq(md) {
     padding: rem(35) rem(31) rem(35) rem(32);
   }
 }
-.footer__wrapper{
-  @include mq(md){
+
+.footer__wrapper {
+  @include mq(md) {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
-.footer__title img{
+
+.footer__title img {
   max-width: rem(72);
   width: 100%;
   margin: auto;
 }
-.footer__lists{
+
+.footer__lists {
   text-align: center;
-  @include mq(md){
+  @include mq(md) {
     display: flex;
     align-items: center;
   }
 }
-.footer__link{
+
+.footer__list a {
   display: block;
   font-size: rem(16);
   color: $white;
@@ -34,42 +38,43 @@
   margin-top: rem(8);
   margin-left: rem(2);
   position: relative;
-  @include mq(md){
+  @include mq(md) {
     letter-spacing: 2px;
     margin-left: rem(30);
     margin-top: initial;
   }
 }
 
-.footer__link::after{
+.footer__list a::after {
   content: "";
   position: absolute;
   bottom: rem(-4);
   left: 0;
   width: 100%;
   height: rem(1);
-  background: #FFEA2E;
+  background: #ffea2e;
   transition: all .3s;
   transform: scale(0, 1);
   transform-origin: center top;
 }
-.footer__link:hover::after{
+
+.footer__list a:hover::after {
   @include mq(md) {
     opacity: 1;
     transform: scale(1, 1);
   }
 }
 
-.footer__copy{
+.footer__copy {
   font-size: rem(11);
   text-align: center;
   color: $white;
   letter-spacing: 1.2px;
   margin-top: rem(30);
   margin-left: rem(4);
-  @include mq(md){
+  @include mq(md) {
     font-size: rem(15);
-    letter-spacing: 0.4px;
+    letter-spacing: .4px;
     margin-top: rem(74);
     padding-right: rem(4);
   }

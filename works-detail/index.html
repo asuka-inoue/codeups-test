@@ -85,10 +85,9 @@
     </div><!-- /.header__inner -->
   </header>
   <main>
-    <div class="inner works-detail__top">
       <!-- ぱんくず -->
-      <div id="breadcrumbs">
-        <div class="bc_inner">
+      <div id="breadcrumbs" class="detail-top">
+        <div class="bc_inner inner">
           <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
             <!-- 1つめ -->
             <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
@@ -117,20 +116,19 @@
           </ol>
         </div>
       </div>
-    </div><!-- /.inner -->
 
-    <section class="works-detail">
+    <section class="works-detail section-worksdetail">
       <div class="works-detail__inner">
         <h2 class="works-detail__title">
           〇〇株式会社　制作実績
         </h2><!-- /.works-detail__title -->
-        <div class="detail__post-info">
+        <div class="works-detail__info detail__post-info">
           <time class="detail__date" datetime="2020-06-13">2020/06/13</time><!-- /.detail__date -->
           <p class="detail__category">カテゴリ1</p><!-- /.detail__category -->
         </div><!-- /.detail__post-info -->
       </div><!-- /.inner -->
 
-      <div class="gallery">                
+      <div class="works-detail__gallery gallery">                
         <div class="swiper gallery-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide gallery-slide"><img src="../images/common/main-gallery1.jpg" alt="制作実績詳細1"></div>
@@ -198,11 +196,14 @@
         </div><!-- /.wp-pagenavi -->
     </section><!-- /.works-detail -->
 
-    <section class="related-article">
+    <section class="related-article section-article">
       <div class="inner">
-        <a href="#" class="btn related-article__btn">関連記事</a><!-- /.btn -->
-        <div class="related-article__contents card__lists">
-          <a href="#" class="card related-article__card">
+        <div class="related-article__btn">
+          <a href="#" class="btn">関連記事</a><!-- /.btn -->
+        </div><!-- /.article__btn -->
+        
+        <div class="related-article__contents cards">
+          <a href="#" class="cards__item card related-article__card">
             <figure class="card__img related-article__img">
               <img src="../images/common/blog6.jpg" alt="関連記事1">
             </figure><!-- /.card__img -->
@@ -219,7 +220,7 @@
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
           </a><!-- /.related-article__content -->
-          <a href="#" class="card related-article__card">
+          <a href="#" class="cards__item card related-article__card">
             <figure class="card__img related-article__img">
               <img src="../images/common/blog7.jpg" alt="関連記事2">
             </figure><!-- /.card__img -->
@@ -236,7 +237,7 @@
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
           </a><!-- /.related-article__content -->
-          <a href="#" class="card related-article__card">
+          <a href="#" class="cards__item card related-article__card">
             <figure class="card__img related-article__img">
               <img src="../images/common/blog8.jpg" alt="関連記事3">
             </figure><!-- /.card__img -->
@@ -253,7 +254,7 @@
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
           </a><!-- /.related-article__content -->
-          <a href="#" class="card related-article__card">
+          <a href="#" class="cards__item card related-article__card">
             <figure class="card__img related-article__img">
               <img src="../images/common/blog9.jpg" alt="関連記事4">
             </figure><!-- /.card__img -->
@@ -272,11 +273,9 @@
           </a><!-- /.related-article__content -->
         </div><!-- /.related-article__contents -->
       </div><!-- /.inner -->
-      
-
     </section><!-- /.related-article -->
     
-    <section class="footer-contact" id="contact">
+    <section class="footer-contact section-footercontact">
       <div class="footer-contact__inner">
         <div class="section-header">
           <h2 class="section-header__title footer-contact__title">contact</h2><!-- /.section-header__title -->

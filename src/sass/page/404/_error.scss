@@ -1,10 +1,8 @@
 @use "global" as *;
 
 .error {
-  margin-top: rem(130);
   padding-bottom: rem(120);
   @include mq(md) {
-    margin-top: rem(200);
     padding-bottom: rem(150);
   }
 }

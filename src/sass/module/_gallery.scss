@@ -1,11 +1,10 @@
 @use "global" as *;
 
-.gallery {
+.gallery__inner {
   width: 100%;
-  margin-top: rem(16);
   @include mq(md) {
     max-width: rem(851);
-    margin: rem(32) auto 0;
+    margin: auto;
     padding: 0 $padding-pc;
   }
 }

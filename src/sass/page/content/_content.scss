@@ -1,9 +1,8 @@
 @use "global" as *;
 
 .content__inner {
-  padding-top: rem(85);
   @include mq(md) {
-    padding: rem(69) $padding-pc 0;
+    padding: 0 $padding-pc;
     max-width: rem(1140);
     width: 100%;
     margin: auto;
@@ -60,6 +59,7 @@
     margin-right: rem(39);
   }
 }
+
 .content__img {
   position: relative;
   @include mq(md) {
@@ -75,7 +75,6 @@
   @include mq(md) {
     padding-top: 66.7272727%;
   }
-  
 }
 
 .content__img img {

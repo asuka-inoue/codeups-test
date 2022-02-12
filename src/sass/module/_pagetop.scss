@@ -25,6 +25,7 @@
   border-radius: 30px;
   background-color: $text-color;
 }
+
 .pagetop::before{
     right: 43%;
     transform: rotate(-45deg);
@@ -32,6 +33,7 @@
       right: 42%;
     }
   }
+
 .pagetop::after{    
     left: 43%;
     transform: rotate(45deg);
@@ -39,12 +41,14 @@
       left: 42%;
     }
   }
+
   .pagetop:hover{
     transition: all .3s;
     @include mq(md) {
       background: $text-color;
     }
   }
+  
   .pagetop:hover::before,
   .pagetop:hover::after{
     @include mq(md) {

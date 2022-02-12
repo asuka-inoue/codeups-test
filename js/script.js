@@ -73,7 +73,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
     speed: 2000,
   }
-  let swiper1 = new Swiper('.swiper1', swipeOption);
+  let swiper1 = new Swiper('.js-top', swipeOption);
 
 // swiper2
   let swiper2 = new Swiper('.swiper2', {

@@ -1,13 +1,6 @@
 @use "global" as *;
 
-.top-overview__inner {
-  margin-top: rem(73);
-  @include mq(md) {
-    margin-top: rem(148);
-  }
-}
-
-.top-overview__subtitle {
+.top-overview__title span {
   @include mq(md) {
     padding-top: rem(13);
   }
@@ -18,6 +11,7 @@
     padding: 0 $padding-pc;
   }
 }
+
 .top-overview__body {
   margin-top: rem(48);
   @include mq(md) {
@@ -28,11 +22,13 @@
     flex-direction: row-reverse;
   }
 }
+
 .top-overview__wrapper {
   @include mq(md) {
     background: linear-gradient(90deg, $text-color 0%, $text-color 50%, transparent 50%, transparent 100%);
   }
 }
+
 .top-overview__img {
   position: relative;
   @include mq(md) {
@@ -42,11 +38,13 @@
     background: linear-gradient(90deg, $text-color 0%, $text-color 47%, transparent 47%, transparent 100%);
   }
 }
+
 .top-overview__img::before{
   content: "";
   display: block;
   padding-top: 69.6%;
 }
+
 .top-overview__img img{
   position: absolute;
   top: 50%;
@@ -55,6 +53,7 @@
   width: 100%;
   object-fit: cover;
 }
+
 .top-overview__content {
   background: $text-color;
   padding: rem(23) $padding-sp $padding-sp;
@@ -99,18 +98,10 @@
 }
 
 .top-overview__btn {
-  margin: rem(26) auto 0;
+  margin-top: rem(26);
+  text-align: center;
   @include mq(md) {
     max-width: rem(360);
-    margin: rem(48) 0 0;
+    margin-top: rem(48);
   }
-}
-
-.top-overview__btn:hover {
-  @include mq(md) {
-    color: $text-color;
-  }
-}
-.top-overview__btn::before {
-  background-color: $white;
 }

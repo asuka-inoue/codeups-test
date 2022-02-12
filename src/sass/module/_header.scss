@@ -63,14 +63,17 @@
   position: absolute;
   transition: transform .5s, opacity .5s;
 }
+
 .header__btn span:nth-child(1) {
   top: 0;
 }
+
 .header__btn span:nth-child(2){
   top: 0;
   bottom: 0;
   margin: auto;
   }
+
 .header__btn span:nth-child(3) {
   bottom: 0;
   }
@@ -79,12 +82,15 @@
 .header__btn.is-active {
   width: rem(23);
 }
+
 .header__btn.is-active span:nth-child(1) { 
   transform: translateY(rem(7)) rotate(-45deg);
   }
+
 .header__btn.is-active span:nth-child(2) {
   opacity: 0;
   }
+  
 .header__btn.is-active span:nth-child(3) {
   transform: translateY(rem(-6)) rotate(45deg);
   }

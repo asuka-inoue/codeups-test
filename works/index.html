@@ -87,40 +87,40 @@
   <main>
     <div class="page-title main-view">
       <div class="page-title__wrap">
-        <img src="../images/common/sp-content-mv.jpg" alt="" class="u-mobile">
-        <img src="../images/common/content-mv.jpg" alt="" class="u-desktop">
+        <picture>
+          <source media="(min-width: 768px)" srcset="../images/common/content-mv.jpg">
+          <img src="../images/common/sp-content-mv.jpg" alt="制作実績">
+        </picture>
         <h2 class="page-title__title">制作実績</h2>
       </div><!-- /.page-title__wrapper -->
     </div><!-- /.page-title -->
 
-    <div class="inner">
-      <!-- ぱんくず -->
-      <div id="breadcrumbs">
-        <div class="bc_inner">
-          <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <!-- 1つめ -->
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
-            itemtype="https://schema.org/ListItem">
-              <a class="breadcrumbs__link" itemprop="item" href="../index.html">
-                <span itemprop="name">トップ</span>
-              </a>
-              <meta itemprop="position" content="1" />
-            </li>           
-            <!-- 2つめ -->
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
-                    itemtype="https://schema.org/ListItem">
-              <a class="breadcrumbs__link" itemprop="item" href="#">
-                <span itemprop="name">制作実績</span>
-              </a>
-                <meta itemprop="position" content="2" />
-            </li>
-          </ol>
-        </div>
+    <!-- ぱんくず -->
+    <div id="breadcrumbs" class="page-breadcrumbs">
+      <div class="bc_inner inner">
+        <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <!-- 1つめ -->
+          <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="../index.html">
+              <span itemprop="name">トップ</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>           
+          <!-- 2つめ -->
+          <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="#">
+              <span itemprop="name">制作実績</span>
+            </a>
+              <meta itemprop="position" content="2" />
+          </li>
+        </ol>
       </div>
-    </div><!-- /.inner -->
+    </div>
 
-    <section class="works">
-      <div class="search__wrap works__search">
+    <section class="works section-works">
+      <div class="works__search search">
         <span class="search__item is-active" data-group="">ALL</span>
         <span class="search__item" data-group="a">カテゴリ1</span>
         <span class="search__item" data-group="b">カテゴリカテゴリ</span>
@@ -176,14 +176,11 @@
             <a href="#" class="wp-pagenavi__numbers">4</a>
             <a href="#" class="wp-pagenavi__next" rel="next">next</a>
           </div><!-- /.wp-pagenavi__wrap -->
-          
         </div><!-- /.wp-pagenavi -->
-
-
       </div><!-- /.inner -->
     </section><!-- /.blog__contents -->
     
-    <section class="footer-contact" id="contact">
+    <section class="footer-contact section-footercontact">
       <div class="footer-contact__inner">
         <div class="section-header">
           <h2 class="section-header__title footer-contact__title">contact</h2><!-- /.section-header__title -->

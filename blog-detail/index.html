@@ -85,10 +85,9 @@
     </div><!-- /.header__inner -->
   </header>
   <main>
-    <div class="inner works-detail__top">
       <!-- ぱんくず -->
-      <div id="breadcrumbs">
-        <div class="bc_inner">
+      <div id="breadcrumbs" class="detail-top">
+        <div class="bc_inner inner">
           <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
             <!-- 1つめ -->
             <li class="breadcrumbs__list" itemprop="itemListElement" itemscope
@@ -117,9 +116,8 @@
           </ol>
         </div>
       </div>
-    </div><!-- /.inner -->
 
-    <section class="blog-detail">
+    <section class="blog-detail section-blogdetail">
       <div class="blog-detail__inner inner">
         <h2 class="blog-detail__title">
           タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。
@@ -130,7 +128,7 @@
         </div><!-- /.detail__post-info -->
       </div><!-- /.inner -->
 
-      <div class="gallery">
+      <div class="blog-detail__gallery gallery">
         <div class="gallery__inner">
           <figure class="gallery__img">
             <img src="../images/common/blog-detail1.jpg" alt="">
@@ -152,7 +150,7 @@
         </p><!-- /.blog-detail__text -->
       </div><!-- /.blog-detail__inner -->
 
-      <div class="gallery">
+      <div class="blog-detail__gallery gallery">
         <div class="gallery__inner">
           <figure class="gallery__img">
             <img src="../images/common/blog-detail2.jpg" alt="">
@@ -180,16 +178,18 @@
         <div class="wp-pagenavi">
           <div class="wp-pagenavi__wrap detail__pagenav">
             <a href="#" class="wp-pagenavi__prev" rel="prev">prev</a>
-            <a href="#" class="wp-pagenavi__more">一覧</a>
+            <a href="../blog/index.html" class="wp-pagenavi__more">一覧</a>
             <a href="#" class="wp-pagenavi__next" rel="next">next</a>
           </div><!-- /.wp-pagenavi__wrap -->
         </div><!-- /.wp-pagenavi -->
     </section><!-- /.works-detail -->
 
-    <section class="related-article">
+    <section class="related-article section-article">
       <div class="inner">
-        <a href="#" class="btn related-article__btn">関連記事</a><!-- /.btn -->
-        <div class="related-article__contents card__lists">
+        <div class="related-article__btn">
+          <a href="#" class="btn">関連記事</a><!-- /.btn -->
+        </div><!-- /.related-article__btn -->
+        <div class="related-article__contents cards">
           <a href="#" class="card related-article__card">
             <figure class="card__img related-article__img">
               <img src="../images/common/blog6.jpg" alt="関連記事1">
@@ -264,7 +264,7 @@
 
     </section><!-- /.related-article -->
     
-    <section class="footer-contact" id="contact">
+    <section class="footer-contact section-footercontact">
       <div class="footer-contact__inner">
         <div class="section-header">
           <h2 class="section-header__title footer-contact__title">contact</h2><!-- /.section-header__title -->

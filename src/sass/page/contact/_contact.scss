@@ -1,12 +1,5 @@
 @use "global" as *;
 
-.contact {
-  margin-top: rem(85);
-  @include mq(md) {
-    margin-top: rem(115);
-  }
-}
-
 .contact__inner {
   @include mq(md) {
     max-width: rem(746);
@@ -21,12 +14,14 @@
     display: flex;
   }
 }
+
 .contact__item + .contact__item {
   margin-top: rem(32);
   @include mq(md) {
     margin-top: rem(45);
   }
 }
+
 .contact__label {
   font-size: rem(14);
   color: $white;
@@ -83,10 +78,6 @@
   }
 }
 
-// input:invalid {
-//   background: #FFDCDC;
-// }
-
 .contact__error-message {
   font-size: rem(16);
   color: #FF5757;
@@ -94,8 +85,3 @@
   display: none;
 }
 
-// input:invalid {
-//   .contact__error-message  {
-//     display: block;
-//   }
-// } 

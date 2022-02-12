@@ -1,21 +1,13 @@
 @use "global" as *;
 
-.top-blog__inner{
-  margin-top: rem(48);
+.top-blog__inner {
   padding: 0 $padding-sp;
-  @include mq(md){
-    margin: rem(150) auto 0;
+  @include mq(md) {
     padding: 0 $padding-pc;
   }
 }
 
-.top-blog__title {
-  @include mq(md) {
-    text-align: right;
-  }
-}
-
-.top-blog__subtitle {
+.top-blog__title span {
   margin-top: rem(-23);
   @include mq(md) {
     padding-top: rem(14);
@@ -24,49 +16,18 @@
   }
 }
 
-.top-blog__contents{
+.top-blog__contents {
   margin-top: rem(64);
-  @include mq(md){
+  @include mq(md) {
     margin: rem(34) auto 0;
   }
 }
 
-.top-blog__content--new {
-  position: relative;
-}
-
-.top-blog__content--new::before {
-  position: absolute;
-  content: "new";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: rem(16);
-  letter-spacing: 2px;
-  line-height: 2.1875;
-  text-transform: capitalize;
-  width: rem(60);
-  height: rem(60);
-  top: rem(-18);
-  left: rem(-14);
-  border-radius: 50%;
-  background: #FFBA6A;
-  z-index: 1;
-
-}
-
-.top-blog__btn{
-  margin: rem(24) auto 0;
+.top-blog__btn {
+  margin-top: rem(24);
+  text-align: center;
   @include mq(md) {
-    max-width: rem(360);
-    margin: rem(48) auto 0;
+    margin-top: rem(48);
   }
 }
-.top-blog__btn:hover {
-  @include mq(md) {
-    color: $text-color;
-  }
-}
-.top-blog__btn::before {
-  background-color: $white;
-}
+

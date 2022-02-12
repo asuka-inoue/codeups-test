@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.section-blogdetail {
+  margin-top: rem(78);
+  @include mq(md) {
+    margin-top: rem(91);
+  }
+}

@@ -1,12 +1,5 @@
 @use "global" as *;
 
-.overview {
-  margin-top: rem(85);
-  @include mq(md) {
-    margin-top: rem(115);
-  }
-}
-
 .overview__item {
   display: flex;
   padding: rem(14) 0 rem(19);
@@ -36,4 +29,11 @@
   font-size: rem(13);
   color: $white;
   line-height: 1.84615385;
+}
+
+.overview__map {
+  margin-top: rem(120);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
 }
