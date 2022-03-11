@@ -149,3 +149,15 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+
+
+
+add_action('bcn_after_fill', 'bc_limit');
+function bc_limit ($trail) {
+  $max = count($trail->breadcrumbs);
+  for ($i = 2; $i < $max - 1; $i++) {
+    unset($trail -> trail[$i]);
+  }
+}
+	
+?>

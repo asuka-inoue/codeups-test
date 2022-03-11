@@ -1,22 +1,24 @@
 @use "global" as *;
 
 .wp-pagenavi {
-  margin: rem(80) auto 0;
-  @include mq(md) {
-    margin-top: rem(104);
-  }
+  display: flex;
 }
 
 .wp-pagenavi__wrap {
   max-width: rem(332);
   width: 100%;
-  margin: auto;
+  margin: rem(80) auto 0;
   display: flex;
   align-items: center;
   letter-spacing: 2px;
+  justify-content: center;
+  @include mq(md) {
+    margin-top: rem(104);
+  }
 }
 
-.wp-pagenavi__numbers {
+.wp-pagenavi a,
+.wp-pagenavi span {
   width: rem(24);
   height: rem(24);
   border: 1px solid $white;
@@ -28,23 +30,21 @@
   margin-left: rem(16);
 }
 
-.wp-pagenavi__numbers:nth-child(2) {
-  margin-left: rem(26);
-}
 
-.wp-pagenavi .current {
+.wp-pagenavi span.current {
   background: $white;
   color: $text-color;
 }
 
-.wp-pagenavi__numbers:hover {
+.wp-pagenavi a:hover {
   @include mq(md) {
     border: initial;
     background: $white;
     color: $text-color;
   }
 }
-.wp-pagenavi__prev {
+.wp-pagenavi a.previouspostslink,
+.wp-pagenavi__prev a {
   width: rem(73);
   height: rem(24);
   border: 1px solid $white;
@@ -59,7 +59,8 @@
   }
 }
 
-.wp-pagenavi__next {
+.wp-pagenavi a.nextpostslink,
+.wp-pagenavi__prev a {
   width: rem(71);
   height: rem(24);
   border: 1px solid $white;
@@ -69,12 +70,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: rem(23);
 }
 
-.wp-pagenavi__prev:hover,
-.wp-pagenavi__next:hover,
-.wp-pagenavi__more:hover {
+.wp-pagenavi a.previouspostslink:hover,
+.wp-pagenavi a.nextpostslink:hover,
+.wp-pagenavi a.wp-pagenavi__more:hover {
   @include mq(md) {
     border: 1px solid $white;
     background: $white;
@@ -82,7 +82,7 @@
   }
 }
 
-.wp-pagenavi__more {
+.wp-pagenavi a.wp-pagenavi__more {
   width: rem(71);
   height: rem(24);
   border: 1px solid $white;

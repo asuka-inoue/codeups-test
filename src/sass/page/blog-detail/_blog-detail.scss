@@ -87,7 +87,7 @@
   }
 }
 
-.blog-detail__list {
+ul.blog-detail__lists li {
   color: $white;
   font-size: rem(16);
   line-height: 2.1875;
@@ -95,7 +95,7 @@
   list-style-type: disc;
 }
 
-.blog-detail__list--num {
+ol.blog-detail__lists li {
   color: $white;
   font-size: rem(16);
   line-height: 2.1875;

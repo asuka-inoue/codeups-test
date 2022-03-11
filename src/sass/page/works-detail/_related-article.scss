@@ -9,9 +9,19 @@
   
 }
 
-.related-article__btn .btn {
-  max-width: inherit;
+.related-article__title {
   padding: rem(8) 0;
+  border: 1px solid $white;
+  text-align: center;
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  line-height: 1;
+  background: $text-color;
+  color: $white;
+}
+
+.related-article__text {
+  color: $white;
 }
 
 .related-article__card {
