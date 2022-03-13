@@ -21,7 +21,7 @@
         </h1><!-- /.blog-detail__title -->
         <div class="blog-detail__info detail__post-info">
         <time class="post-info__date" datetime="<?php echo get_the_time('Y-m-d'); ?>"><?php echo get_the_time('Y/m/d'); ?></time><!-- /.detail__date -->
-          <p class="detail__category"><?php the_field('category'); ?></p><!-- /.detail__category -->
+          <div class="detail__category"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></div><!-- /.detail__category -->
         </div><!-- /.detail__post-info -->
       </div><!-- /.inner -->
 
@@ -43,9 +43,9 @@
       </div>
 
       <div class="blog-detail__inner inner">
-        <p class="blog-detail__text">
-        <?php the_field('main_text'); ?>
-        </p><!-- /.blog-detail__text -->
+        <div class="blog-detail__text">
+        <?php the_content(); ?>
+        </div><!-- /.blog-detail__text -->
         <h3 class="blog-detail__subtitle"><?php the_field('title2'); ?></h3><!-- /.blog-detail__subtitle -->
         <p class="blog-detail__text">
         <?php the_field('text2'); ?>
@@ -126,17 +126,17 @@
         
           <a href="<?php the_permalink(); ?>" class="card related-article__card">
             <figure class="card__img related-article__img">
-              <?php the_post_thumbnail('medium'); ?>
+            <?php the_post_thumbnail(); ?>
             </figure><!-- /.card__img -->
             <div class="card__body">
               <h3 class="card__title">
-                <?php the_title(); ?>
+                <?php echo wp_trim_words( get_the_title(), 18, '...' ); ?>
               </h3><!-- /.card__title -->
               <p class="card__text u-mobile">
-                <?php the_field('main_text'); ?>
+              <?php echo wp_trim_words( get_the_content(), 38, '...' ); ?>
               </p><!-- /.card__text -->
               <div class="card__info">
-                <p class="card__category"><?php the_field('category'); ?></p>
+                <p class="card__category"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></p>
                 <time class="card__date" datetime="the_time( 'Y-m-d' )"><?php the_field('date'); ?></time>
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
@@ -167,7 +167,7 @@
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p><!-- /.footer-contact__text -->
           <div class="footer-contact__btn">
-            <a href="#" class="btn">お問い合わせへ</a><!-- /.btn -->
+            <a href="<?php echo esc_url( home_url( '/' )); ?>/contact" class="btn">お問い合わせへ</a><!-- /.btn -->
           </div>
         </div><!-- /.footer-contact__body -->
       </div><!-- /.footer-contact__inner -->

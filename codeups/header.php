@@ -25,6 +25,11 @@
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = '<?php echo esc_url( home_url( '/' )); ?>/thanks';
+}, false );
+</script>
 
   <?php wp_head(); ?>
 </head>

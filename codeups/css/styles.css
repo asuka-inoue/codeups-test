@@ -253,6 +253,7 @@ select::-ms-expand {
 }
 
 .card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,12 +425,7 @@ select::-ms-expand {
 }
 
 .card--new {
-  position: relative;
-}
-
-.card--new::before {
   position: absolute;
-  content: "new";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1902,9 +1898,6 @@ select::-ms-expand {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     max-width: 68.75rem;
     width: 100%;
     margin: 2.5rem auto 0;
@@ -2053,6 +2046,7 @@ select::-ms-expand {
 .section-contact {
   margin-top: 85px;
   margin-top: 5.3125rem;
+  padding-bottom: 150px;
 }
 @media screen and (min-width: 768px) {
   .section-contact {
@@ -3206,8 +3200,22 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 }
 
+.works__category {
+  position: absolute;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding: 8px 20px;
+  padding: 0.5rem 1.25rem;
+  top: 0;
+  right: 0;
+}
+
 .works__img {
   position: relative;
+  overflow: hidden;
 }
 
 .works__img::before {
@@ -3233,9 +3241,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
      object-fit: cover;
 }
 
-.works__img::after {
+.works__img figcaption {
   position: absolute;
-  content: "カテゴリ1";
   background: #111;
   color: #fff;
   font-size: 16px;

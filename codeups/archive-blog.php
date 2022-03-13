@@ -33,11 +33,12 @@
       <div class="inner blog__inner">
         <div class="blog__search search">
           <span class="search__item is-active" data-group="">ALL</span>
-          <span class="search__item" data-group="a">カテゴリ1</span>
-          <span class="search__item" data-group="b">カテゴリカテゴリ</span>
-          <span class="search__item" data-group="c">カテ</span>
+          <span class="search__item" data-group="category1">カテゴリ1</span>
+          <span class="search__item" data-group="category2">カテゴリ2</span>
+          <span class="search__item" data-group="category3">カテゴリ3</span>
         </div>
 
+        <div class="blog__contents cards">
         <?php
         $paged = get_query_var('paged')? get_query_var('paged') : 1;
         $blog= new WP_Query( array(
@@ -49,166 +50,48 @@
         if ( $blog ->have_posts() ) :
       ?>
       <?php while ( $blog -> have_posts() ) : $blog -> the_post(); ?>
-        <div class="blog__contents cards">
-          <a href="../blog-detail/index.html" class="cards__item card card--new" data-group="a">
+      
+      
+          <a href="<?php the_permalink(); ?>" class="cards__item card" data-group="<?php the_field('category_label'); ?>">
+          <?php
+          //記事の公開時間
+          $get_time = get_the_time('U');
+
+          //何日以内の記事にNEWをつけるか？此処を変更すればOK
+          $w = 7;
+
+          // 今の時間 - 7日
+          $last = time() - ($w * 24 * 60 * 60);
+
+          //　記事の公開時間が7日以内かどうかを判定。
+          //  7日以内だったらpタグ入れる
+          if ($get_time > $last) {
+            echo '<p class="card--new">NEW</p>';
+          }
+          ?>
             <figure class="card__img">
-              <img src="../images/common/blog1.jpg" alt="ブログ1">
+              <?php echo get_the_post_thumbnail(); ?>
             </figure><!-- /.card__img -->
             <div class="card__body">
               <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
+              <?php echo wp_trim_words(get_the_title(), 30, '...'); ?>
               </h3><!-- /.card__title -->
               <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
+              <?php echo wp_trim_words( get_the_content(), 38, '...' ); ?>
               </p><!-- /.card__text -->
               <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
+                <p class="card__category"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></p>
+                <time class="card__date" datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y.m.d' ); ?></time>
               </div><!-- /.card__info -->
             </div><!-- /.card__body -->
           </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="b">
-            <figure class="card__img">
-              <img src="../images/common/blog2.jpg" alt="ブログ2">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="c">
-            <figure class="card__img">
-              <img src="../images/common/blog3.jpg" alt="ブログ3">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="a">
-            <figure class="card__img">
-              <img src="../images/common/blog4.jpg" alt="ブログ4">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="b">
-            <figure class="card__img">
-              <img src="../images/common/blog5.jpg" alt="ブログ5">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="c">
-            <figure class="card__img">
-              <img src="../images/common/blog6.jpg" alt="ブログ6">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="a">
-            <figure class="card__img">
-              <img src="../images/common/blog7.jpg" alt="ブログ7">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="b">
-            <figure class="card__img">
-              <img src="../images/common/blog8.jpg" alt="ブログ8">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-          <a href="#" class="cards__item card" data-group="c">
-            <figure class="card__img">
-              <img src="../images/common/blog9.jpg" alt="ブログ9">
-            </figure><!-- /.card__img -->
-            <div class="card__body">
-              <h3 class="card__title">
-                タイトルが入ります。タイトルが入ります。
-              </h3><!-- /.card__title -->
-              <p class="card__text">
-                説明文が入ります。説明文が入ります。説明文が入ります。
-              </p><!-- /.card__text -->
-              <div class="card__info">
-                <p class="card__category">カテゴリ</p>
-                <time class="card__date" datetime="2021-07-20">2021.07.20</time>
-              </div><!-- /.card__info -->
-            </div><!-- /.card__body -->
-          </a><!-- /.blog__content -->
-        </div><!-- /.blog__contents -->
+        
         <?php endwhile; ?>
         <?php
       // サブクエリをリセット
         wp_reset_postdata();
         ?>
+        </div><!-- /.blog__contents -->
 
         <div class="wp-pagenavi__wrap">
           <?php
@@ -233,7 +116,7 @@
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p><!-- /.footer-contact__text -->
           <div class="footer-contact__btn">
-            <a href="#" class="btn">お問い合わせへ</a><!-- /.btn -->
+            <a href="<?php echo esc_url( home_url( '/' )); ?>/contact" class="btn">お問い合わせへ</a><!-- /.btn -->
           </div>
         </div><!-- /.footer-contact__body -->
       </div><!-- /.footer-contact__inner -->

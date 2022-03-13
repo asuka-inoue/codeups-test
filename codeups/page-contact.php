@@ -5,6 +5,7 @@
 ?>
 
 <?php get_header(); ?>
+
   <main>
     <div class="page-title main-view">
       <div class="page-title__wrap">
@@ -30,32 +31,9 @@
 
     <section class="contact section-contact">
       <div class="contact__inner inner">
-        <form action="" class="contact__form">
-          <div class="contact__error-message">※必要事項を入力してください</div>
-          <div class="contact__item">
-            <label class="contact__label" for="company">※会社名・団体名</label>
-            <input class="contact__input" type="text" id="company" name="company" placeholder="テキストがはいります" required>
-          </div><!-- /.contact__item -->
-          <div class="contact__item">
-            <label class="contact__label" for="name">※お名前</label>
-            <input  class="contact__input" type="text" id="name" name="name" placeholder="テキストがはいります" required>
-          </div><!-- /.contact__item -->
-          <div class="contact__item">
-            <label class="contact__label" for="kana">※ふりがな</label>
-            <input  class="contact__input" type="text" id="kana" name="kana" placeholder="テキストがはいります" required>
-          </div><!-- /.contact__item -->
-          <div class="contact__item">
-            <label class="contact__label" for="email">※メールアドレス</label>
-            <input  class="contact__input" type="text" id="email" name="email" placeholder="テキストがはいります" required>
-          </div><!-- /.contact__item -->
-          <div class="contact__item">
-            <label class="contact__label" for="message">※お問い合わせ内容</label>
-            <textarea  class="contact__input" id="message" name="message" placeholder="テキストがはいります" rows="11" required></textarea>
-          </div><!-- /.contact__item -->
-          <div class="contact__btn">
-            <input class="contact__submit" type="submit" value="送信">
-          </div><!-- /.contact__submit -->
-        </form><!-- /.contact__form -->
+        <div class="contact__form">
+          <?php echo apply_shortcodes( '[contact-form-7 id="201" title="お問い合わせ"]' ); ?>
+        </div><!-- /.contact__form -->
       </div>
     </section><!-- /.contact -->
     

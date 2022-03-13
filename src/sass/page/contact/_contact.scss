@@ -9,6 +9,9 @@
   }
 }
 
+.contact__form {
+  position: relative;
+}
 .contact__item {
   @include mq(md) {
     display: flex;

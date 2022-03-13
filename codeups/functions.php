@@ -159,5 +159,29 @@ function bc_limit ($trail) {
     unset($trail -> trail[$i]);
   }
 }
+
+function my_wpcf7_ajax_json_echo( $items, $result ) {
+
+	// メッセージを表示させたい場所のタグのエラー用のクラス名.
+	$class_birthday = 'wpcf7-not-valid-tip';
+
+	// メッセージの位置を変更したい項目名.
+	$names_birthday = array( 'your-company', 'your-name', 'your-kana','your-email', 'your-message' );
+
+	// 入力エラーがある場合.
+	if ( isset( $items['invalidFields'] ) ) {
+		foreach ( $items['invalidFields'] as $k => $v ) {
+			$orig = $v['into'];
+			$name = substr( $orig, strrpos( $orig, '.' ) + 1 );
+
+			// 位置を変更したい項目のみ、エラーを設定するタグのクラス名を差替.
+			if ( in_array( $name, $names_birthday ) ) {
+				$items['invalidFields'][ $k ]['into'] = ".{$class_birthday}.{$name}";
+			}
+		}
+	}
+	return $items;
+}
+add_filter( 'wpcf7_ajax_json_echo', 'my_wpcf7_ajax_json_echo', 10, 2 );
 	
 ?>

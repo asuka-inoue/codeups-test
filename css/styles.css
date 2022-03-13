@@ -253,6 +253,7 @@ select::-ms-expand {
 }
 
 .card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,12 +420,7 @@ select::-ms-expand {
 }
 
 .card--new {
-  position: relative;
-}
-
-.card--new::before {
   position: absolute;
-  content: "new";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1879,9 +1875,6 @@ ol.blog-detail__lists li {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     max-width: 68.75rem;
     width: 100%;
     margin: 2.5rem auto 0;
@@ -1916,6 +1909,10 @@ ol.blog-detail__lists li {
     margin: auto;
     padding: 0 25px;
   }
+}
+
+.contact__form {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -3184,6 +3181,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .works__img {
   position: relative;
+  overflow: hidden;
+}
+
+.works__category {
+  position: absolute;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding: 8px 20px;
+  padding: 0.5rem 1.25rem;
+  top: 0;
+  right: 0;
 }
 
 .works__img::before {
@@ -3209,20 +3220,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
      object-fit: cover;
 }
 
-.works__img::after {
-  position: absolute;
-  content: "カテゴリ1";
-  background: #111;
-  color: #fff;
-  font-size: 16px;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  padding: 8px 20px;
-  padding: 0.5rem 1.25rem;
-  top: 0;
-  right: 0;
-}
-
 .works__title {
   color: #fff;
   font-size: 20px;
@@ -3245,6 +3242,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .works__card {
+  position: relative;
   display: block;
 }
 @media screen and (min-width: 768px) {

@@ -86,7 +86,7 @@
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p><!-- /.footer-contact__text -->
           <div class="footer-contact__btn">
-            <a href="#" class="btn">お問い合わせへ</a><!-- /.btn -->
+            <a href="<?php echo esc_url( home_url( '/' )); ?>/contact" class="btn">お問い合わせへ</a><!-- /.btn -->
           </div>
         </div><!-- /.footer-contact__body -->
       </div><!-- /.footer-contact__inner -->

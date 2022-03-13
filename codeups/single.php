@@ -80,10 +80,10 @@
             </figure><!-- /.card__img -->
             <div class="card__body">
               <h3 class="card__title">
-                <?php the_title(); ?>
+                <?php echo wp_trim_words( get_the_title(), 18, '...' ); ?>
               </h3><!-- /.card__title -->
               <p class="card__text u-mobile">
-                <?php the_field('main_text'); ?>
+                <?php echo wp_trim_words( get_the_content(), 38, '...' ); ?>
               </p><!-- /.card__text -->
               <div class="card__info">
                 <p class="card__category"><?php the_field('category'); ?></p>
@@ -117,7 +117,7 @@
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p><!-- /.footer-contact__text -->
           <div class="footer-contact__btn">
-            <a href="#" class="btn">お問い合わせへ</a><!-- /.btn -->
+            <a href="<?php echo esc_url( home_url( '/' )); ?>/contact" class="btn">お問い合わせへ</a><!-- /.btn -->
           </div>
         </div><!-- /.footer-contact__body -->
       </div><!-- /.footer-contact__inner -->

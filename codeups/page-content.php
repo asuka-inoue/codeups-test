@@ -34,7 +34,7 @@
         <div class="content__description">
           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
         </div><!-- /.content__description -->
-        <div class="content__box">
+        <div class="content__box" id="content1">
           <figure class="content__img">
             <img src="<?php echo get_template_directory_uri(); ?>/images/common/content-img1.jpg" alt="">
           </figure><!-- /.content__img -->
@@ -47,7 +47,7 @@
             </p><!-- /.content__text -->
           </div><!-- /.content__textbox -->
         </div><!-- /.content__box -->
-        <div class="content__box">
+        <div class="content__box" id="content2">
           <figure class="content__img">
             <img src="<?php echo get_template_directory_uri(); ?>/images/common/content-img2.jpg" alt="">
           </figure><!-- /.content__img -->
@@ -60,7 +60,7 @@
             </p><!-- /.content__text -->
           </div><!-- /.content__textbox -->
         </div><!-- /.content__box -->
-        <div class="content__box">
+        <div class="content__box" id="content3">
           <figure class="content__img">
             <img src="<?php echo get_template_directory_uri(); ?>/images/common/content-img3.jpg" alt="">
           </figure><!-- /.content__img -->
@@ -87,7 +87,7 @@
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p><!-- /.footer-contact__text -->
           <div class="footer-contact__btn">
-            <a href="#" class="btn">お問い合わせへ</a><!-- /.btn -->
+            <a href="<?php echo esc_url( home_url( '/' )); ?>/contact" class="btn">お問い合わせへ</a><!-- /.btn -->
           </div>
         </div><!-- /.footer-contact__body -->
       </div><!-- /.footer-contact__inner -->

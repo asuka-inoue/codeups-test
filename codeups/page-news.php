@@ -43,8 +43,8 @@
       <?php while ( $information -> have_posts() ) : $information -> the_post(); ?>
         <div class="news__content">
           <div class="news__info post-info">
-            <time class="post-info__date" datetime="the_time( 'Y-m-d' )"><?php the_time( 'Y.m.d' ); ?></time>
-            <p class="post-info__category">お知らせ</p>
+            <time class="post-info__date" datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y.m.d' ); ?></time>
+            <div class="post-info__category"><?php the_category(); ?></div>
           </div><!-- /.news__head -->
           <h3 class="news__title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><!-- /.news__title-link -->
@@ -78,7 +78,7 @@
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p><!-- /.footer-contact__text -->
           <div class="footer-contact__btn">
-            <a href="#" class="btn">お問い合わせへ</a><!-- /.btn -->
+            <a href="<?php echo esc_url( home_url( '/' )); ?>/contact" class="btn">お問い合わせへ</a><!-- /.btn -->
           </div>
         </div><!-- /.footer-contact__body -->
       </div><!-- /.footer-contact__inner -->

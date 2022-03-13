@@ -32,8 +32,18 @@
 
 .works__img {
   position: relative;
+  overflow: hidden;
 }
-
+.works__category {
+    position: absolute;
+    background: $black;
+    color: $white;
+    font-size: rem(16);
+    letter-spacing: 2px;
+    padding: rem(8) rem(20);
+    top: 0;
+    right: 0;
+}
 .works__img::before {
   position: relative;
   content: "";
@@ -53,17 +63,17 @@
   object-fit: cover;
 }
 
-.works__img::after {
-  position: absolute;
-  content: "カテゴリ1";
-  background: $black;
-  color: $white;
-  font-size: rem(16);
-  letter-spacing: 2px;
-  padding: rem(8) rem(20);
-  top: 0;
-  right: 0;
-}
+// .works__img::after {
+//   position: absolute;
+//   content: "カテゴリ1";
+//   background: $black;
+//   color: $white;
+//   font-size: rem(16);
+//   letter-spacing: 2px;
+//   padding: rem(8) rem(20);
+//   top: 0;
+//   right: 0;
+// }
 
 .works__title {
   color: $white;
@@ -83,6 +93,7 @@
 }
 
 .works__card {
+  position: relative;
   display: block;
   @include mq(md) {
     width:calc((100% - #{rem(48)}) / 2);

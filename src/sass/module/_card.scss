@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: $white;
@@ -127,12 +128,7 @@
 }
 
 .card--new {
-  position: relative;
-}
-
-.card--new::before {
   position: absolute;
-  content: "new";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,3 +144,22 @@
   background: #ffba6a;
   z-index: 1;
 }
+
+// .card--new::before {
+//   position: absolute;
+//   content: "new";
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: rem(16);
+//   letter-spacing: 2px;
+//   line-height: 2.1875;
+//   text-transform: capitalize;
+//   width: rem(60);
+//   height: rem(60);
+//   top: rem(-18);
+//   left: rem(-14);
+//   border-radius: 50%;
+//   background: #ffba6a;
+//   z-index: 1;
+// }
