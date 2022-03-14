@@ -90,44 +90,66 @@ let swiper2 = new Swiper('.swiper2', {
 });
 
 
-var searchItem = '.search__item';   // 絞り込む項目を選択するエリア
-var listItem = '.card';   // 絞り込み対象のアイテム
-var hideClass = 'is-hide';         // 絞り込み対象外の場合に付与されるclass名
-var activeClass = 'is-active';     // 選択中のグループに付与されるclass名
 
-$(function() {
-// 絞り込みを変更した時
-$(searchItem).on('click', function() {
-  $(searchItem).removeClass(activeClass);
-  var group = $(this).addClass(activeClass).data('group');
-  search_filter(group);
-});
-});
+$(function(){
+  var $btn = $('.blog__search [data-filter]'),
+  $list = $('.blog__contents [data-category]');
 
-/**
-* リストの絞り込みを行う
-* @param {String} group data属性の値
-*/
-function search_filter(group) {
-// 非表示状態を解除
-$(listItem).removeClass(hideClass);
-// 値が空の場合はすべて表示
-if(group === '') {
-  return;
-}
-// リスト内の各アイテムをチェック
-for (var i = 0; i < $(listItem).length; i++) {
-  // アイテムに設定している項目を取得
-  var itemData = $(listItem).eq(i).data('group');
-  // 絞り込み対象かどうかを調べる
-  if(itemData !== group) {
-    $(listItem).eq(i).addClass(hideClass);
-  }
-}
-}
-});
+  $btn.on('click', function() {
+    $('.blog__search .search__item').removeClass('is-active');
+    $(this).addClass('is-active');
 
-var searchItem = '.search__item';   // 絞り込む項目を選択するエリア
+    var $btnTxt = $(this).attr('data-filter');
+
+    if ($btnTxt == ''){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[data-category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+});
+// var search = '.blog__search .search__item';   // 絞り込む項目を選択するエリア
+// var list = '.blog__contents .card';   // 絞り込み対象のアイテム
+// var hide = 'is-hide';         // 絞り込み対象外の場合に付与されるclass名
+// var active = 'is-active';     // 選択中のグループに付与されるclass名
+
+// $(function() {
+// // 絞り込みを変更した時
+// $(search).on('click', function() {
+//   $(search).removeClass(active);
+//   var group1 = $(this).addClass(active).data('group');
+//   search_filter(group1);
+// });
+// });
+
+// /**
+// * リストの絞り込みを行う
+// * @param {String} group1 data属性の値
+// */
+// function search_filter(group1) {
+// // 非表示状態を解除
+// $(list).removeClass(hide);
+// // 値が空の場合はすべて表示
+// if(group1 === '') {
+//   return;
+// }
+// // リスト内の各アイテムをチェック
+// for (var i = 0; i < $(list).length; i++) {
+//   // アイテムに設定している項目を取得
+//   var item = $(list).eq(i).data('group');
+//   // 絞り込み対象かどうかを調べる
+//   if(item !== group1) {
+//     $(list).eq(i).addClass(hide);
+//   }
+// }
+// };
+
+
+var searchItem = '.works__search .search__item';   // 絞り込む項目を選択するエリア
 var listItem = '.works__card';   // 絞り込み対象のアイテム
 var hideClass = 'is-hide';         // 絞り込み対象外の場合に付与されるclass名
 var activeClass = 'is-active';     // 選択中のグループに付与されるclass名
@@ -193,11 +215,22 @@ navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
 },
-// thumbs: {
-//   swiper3: thumbs
-// }
 });
 
 
 slider3.controller.control = thumbs;
 thumbs.controller.control = slider3;
+
+
+// エラーメッセージ位置変更
+$(document).on('wpcf7invalid', function() { // ①
+  $.ajax().always(function () { // ②
+    $('.contact__item').each(function (index, el) { // ③
+      if ($(el).find('.wpcf7-not-valid-tip').length) { // ④
+        $(el).find('.wpcf7-not-valid-tip').insertBefore($(el)) // ⑤
+      }
+    });
+  });
+});
+
+});

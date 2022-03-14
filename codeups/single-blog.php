@@ -145,7 +145,7 @@
           else:
           ?>
 
-          <p>記事は見つかりませんでした</p>
+          <p class="related-article__text">記事は見つかりませんでした</p>
 
           <?php
           endif;

@@ -381,6 +381,8 @@ select::-ms-expand {
       -ms-flex-align: center;
           align-items: center;
   margin-top: auto;
+  padding-top: 15px;
+  padding-top: 0.9375rem;
 }
 
 .card__category {

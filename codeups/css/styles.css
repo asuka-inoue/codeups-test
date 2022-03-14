@@ -381,12 +381,9 @@ select::-ms-expand {
       -ms-flex-align: center;
           align-items: center;
   margin-top: auto;
+  padding-top: 15px;
+  padding-top: 0.9375rem;
 }
-/* @media screen and (min-width: 768px) {
-  .card__info {
-    margin-top: 0.5625rem;
-  }
-} */
 
 .card__category {
   background: #ffea2e;
@@ -1902,6 +1899,19 @@ select::-ms-expand {
     width: 100%;
     margin: 2.5rem auto 0;
     gap: 3rem 1.5625rem;
+  }
+}
+
+.blog__contents .card {
+  animation: on .8s;
+}
+
+@keyframes on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

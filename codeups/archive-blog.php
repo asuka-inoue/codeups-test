@@ -32,10 +32,10 @@
     <section class="blog section-blog">
       <div class="inner blog__inner">
         <div class="blog__search search">
-          <span class="search__item is-active" data-group="">ALL</span>
-          <span class="search__item" data-group="category1">カテゴリ1</span>
-          <span class="search__item" data-group="category2">カテゴリ2</span>
-          <span class="search__item" data-group="category3">カテゴリ3</span>
+          <span class="search__item is-active" data-filter="">ALL</span>
+          <span class="search__item" data-filter="category1">カテゴリ1</span>
+          <span class="search__item" data-filter="category2">カテゴリ2</span>
+          <span class="search__item" data-filter="category3">カテゴリ3</span>
         </div>
 
         <div class="blog__contents cards">
@@ -52,7 +52,7 @@
       <?php while ( $blog -> have_posts() ) : $blog -> the_post(); ?>
       
       
-          <a href="<?php the_permalink(); ?>" class="cards__item card" data-group="<?php the_field('category_label'); ?>">
+          <a href="<?php the_permalink(); ?>" class="cards__item card" data-category="<?php the_field('category_label'); ?>">
           <?php
           //記事の公開時間
           $get_time = get_the_time('U');
