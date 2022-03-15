@@ -63,7 +63,7 @@
                     <?php while ( $query->have_posts() ) : $query->the_post();?>
           <div class="top-news__info post-info">
           <time class="post-info__date" datetime="the_time( 'Y-m-d' )"><?php the_time( 'Y.m.d' ); ?></time>
-          <div class="post-info__category"><?php the_category(); ?></d>
+          <div class="post-info__category"><?php the_category(); ?></div>
         </div><!-- /.top-news__head -->
         <h3 class="news__title top-news__title">
         <a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a><!-- /.top-news__title-link -->
