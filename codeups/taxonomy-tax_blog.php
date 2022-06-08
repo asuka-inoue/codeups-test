@@ -1,8 +1,3 @@
-<?php
-/*
-* Template Name: page-blog
-*/
-?>
 
 <?php get_header(); ?>
 
@@ -32,7 +27,7 @@
     <section class="blog section-blog">
       <div class="inner blog__inner">
         <div class="blog__search search">
-          <span class="search__item is-active">ALL</span>
+          <a href="<?php echo esc_url( home_url( '/' )); ?>/blog" class="search__item">ALL</a>
           <?php
           $taxonomies = 'tax_blog';
           $args = array(
@@ -46,26 +41,41 @@
             $term_slug = $term->slug;
             $term_link = get_term_link($term_slug, $taxonomies)
           ?>
-          <a class="search__item" href="<?php echo $term_link; ?>"><?php echo $term_name; ?></a>
+          <?php
+            //現在表示中のタクソノミーアーカイブのスラッグと一致している場合
+            if (get_query_var('term') === $term_slug) : ?>
+              <span class="search__item is-active"><?php echo $term_name; ?></span>
+            <?php else : ?>
+              <a class="search__item" href="<?php echo $term_link; ?>"><?php echo $term_name; ?></a>
+            <?php endif; ?>
           <?php endforeach; ?>
-          <!-- <span class="search__item" data-filter="category1">カテゴリ1</span>
-          <span class="search__item" data-filter="category2">カテゴリ2</span>
-          <span class="search__item" data-filter="category3">カテゴリ3</span> -->
         </div>
 
         <div class="blog__contents cards">
         <?php
         $paged = get_query_var('paged')? get_query_var('paged') : 1;
-        $blog= new WP_Query( array(
-                    'post_type' => 'blog',
-                    'paged' => $paged,
-                    'post_status' => 'publish',
-                    'posts_per_page' => 9,
-                ));
-        if ( $blog ->have_posts() ) :
-      ?>
-      <?php while ( $blog -> have_posts() ) : $blog -> the_post(); ?>
+        $tax_blog_args = array(
+          'paged' => $paged,
+          'post_type' => array('blog'),
+          'post_status' => 'publish',
+          'order' => 'DESC',
+          'orderby' => 'date',
+          'posts_per_page' => 9,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'tax_blog',
+              'field' => 'slug',
+              'terms' => get_query_var('term'), //get_query_var()はページ種別やパーマリンク 構造によって取得できる情報が自動的に変化していく便利な関数
+            ),
+          ),
+        );
       
+        $tax_blog_query = new WP_Query($tax_blog_args);
+
+            $post_count = $tax_blog_query->found_posts;
+            if ($tax_blog_query->have_posts()) :
+            ?>
+        <?php while ($tax_blog_query->have_posts()) : $tax_blog_query->the_post(); ?>
       
           <a href="<?php the_permalink(); ?>" class="cards__item card">
           <?php
@@ -115,7 +125,7 @@
         <div class="wp-pagenavi__wrap">
           <?php
             if( function_exists('wp_pagenavi') ) {
-                    wp_pagenavi(array('query' => $blog));
+                    wp_pagenavi(array('query' => $tax_blog_query));
             }
             ?>
           <?php endif;?>

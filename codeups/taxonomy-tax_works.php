@@ -1,8 +1,3 @@
-<?php
-/*
-* Template Name: page-work
-*/
-?>
 
 <?php get_header(); ?>
 
@@ -31,7 +26,7 @@
 
     <section class="works section-works">
       <div class="works__search search">
-        <span class="search__item is-active">ALL</span>
+        <a href="<?php echo esc_url( home_url( '/' )); ?>/works" class="search__item">ALL</a>
         <?php
           $taxonomies = 'tax_works';
           $args = array(
@@ -45,7 +40,13 @@
             $term_slug = $term->slug;
             $term_link = get_term_link($term_slug, $taxonomies)
           ?>
-          <a class="search__item" href="<?php echo $term_link; ?>"><?php echo $term_name; ?></a>
+          <?php
+            //現在表示中のタクソノミーアーカイブのスラッグと一致している場合
+            if (get_query_var('term') === $term_slug) : ?>
+              <span class="search__item is-active"><?php echo $term_name; ?></span>
+            <?php else : ?>
+              <a class="search__item" href="<?php echo $term_link; ?>"><?php echo $term_name; ?></a>
+            <?php endif; ?>
           <?php endforeach; ?>
       </div>
 
@@ -53,39 +54,49 @@
         <div class="works__contents">
         <?php
         $paged = get_query_var('paged')? get_query_var('paged') : 1;
-        $work= new WP_Query( array(
-                    'post_type' => 'works',
-                    'paged' => $paged,
-                    'post_status' => 'publish',
-                    'posts_per_page' => 6,
-                ));
-        if ( $work ->have_posts() ) :
-      ?>
-      <?php while ( $work -> have_posts() ) : $work -> the_post(); ?>
-      
+            $tax_works_args = array(
+              'paged' => $paged,
+              'post_type' => array('works'),
+              'post_status' => 'publish',
+              'order' => 'DESC',
+              'orderby' => 'date',
+              'posts_per_page' => 6,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'tax_works',
+                  'field' => 'slug',
+                  'terms' => get_query_var('term'), //get_query_var()はページ種別やパーマリンク 構造によって取得できる情報が自動的に変化していく便利な関数
+                ),
+              ),
+            );
+
+            $tax_works_query = new WP_Query($tax_works_args);
+
+            $post_count = $tax_works_query->found_posts;
+            if ($tax_works_query->have_posts()) :
+            ?>
+        <?php while ($tax_works_query->have_posts()) : $tax_works_query->the_post(); ?>
           <a href="<?php the_permalink(); ?>" class="works__card">
             <figure class="works__img">
               <?php echo get_the_post_thumbnail(); ?>
               <?php
                 $terms = get_the_terms(get_the_ID(), 'tax_works');
                 if ($terms) : ?>
-                <figcaption><?php echo $terms[0]->name; ?></figcaption>
-                <?php endif; ?>
+              <figcaption><?php echo $terms[0]->name; ?></figcaption>
+              <?php endif; ?>
             </figure><!-- /.card__img -->
             <h3 class="works__title"><?php the_title(); ?></h3>
           </a><!-- /.blog__content -->
         
         <?php endwhile; ?>
         <?php
-      // サブクエリをリセット
-        wp_reset_postdata();
-        ?>
+            wp_reset_postdata(); ?>
         </div><!-- /.blog__contents -->
 
         <div class="wp-pagenavi__wrap">
           <?php
             if( function_exists('wp_pagenavi') ) {
-                    wp_pagenavi(array('query' => $work));
+                    wp_pagenavi(array('query' => $tax_works_query));
             }
             ?>
           <?php endif;?>

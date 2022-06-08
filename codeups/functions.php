@@ -184,4 +184,48 @@ function my_wpcf7_ajax_json_echo( $items, $result ) {
 }
 add_filter( 'wpcf7_ajax_json_echo', 'my_wpcf7_ajax_json_echo', 10, 2 );
 	
+
+/**
+ * カスタムタクソノミー
+ */
+add_action('init', 'my_add_taxonomy');
+function my_add_taxonomy()
+{
+  register_taxonomy(
+    'tax_works', // タクソノミー名
+    array('works'), // カスタム投稿タイプ名
+    array(
+      'label' => '制作実績カテゴリー',
+      'labels' => array(
+        'all_items' => '全てのカテゴリー',
+        'add_new_item' => 'カテゴリーを追加'
+      ),
+      'public' => true,
+      'hierarchical' => true,
+      'show_in_rest' => true,
+      'rewrite' => array(
+        'slug' => 'works',
+      ),
+    )
+  );
+
+	register_taxonomy(
+    'tax_blog', // タクソノミー名
+    array('blog'), // カスタム投稿タイプ名
+    array(
+      'label' => 'ブログカテゴリー',
+      'labels' => array(
+        'all_items' => '全てのカテゴリー',
+        'add_new_item' => 'カテゴリーを追加'
+      ),
+      'public' => true,
+      'hierarchical' => true,
+      'show_in_rest' => true,
+      'rewrite' => array(
+        'slug' => 'blog',
+      ),
+    )
+  );
+}
+
 ?>
