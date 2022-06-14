@@ -67,10 +67,11 @@
       </div><!-- /.inner -->
       <div class="overview__map map">
         <div class="map__inner">
-          <picture>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853398501!2d139.76493611477107!3d35.681240537579804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1655193665878!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <!-- <picture>
             <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/common/map.jpg">
             <img src="<?php echo get_template_directory_uri(); ?>/images/common/sp-map.jpg" alt="map">
-          </picture>
+          </picture> -->
         </div><!-- /.map__inner -->
       </div><!-- /.map -->
     </section><!-- /.overview -->

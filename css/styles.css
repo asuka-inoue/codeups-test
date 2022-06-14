@@ -2198,13 +2198,26 @@ ol.blog-detail__lists li {
   }
 }
 
+.map__inner {
+  width: 100%;
+  height: 0;
+  margin: auto;
+  position: relative;
+  padding-top: 80%;
+}
 @media screen and (min-width: 768px) {
   .map__inner {
-    max-width: 71.875rem;
-    width: 100%;
-    margin: auto;
-    padding: 0 25px;
+    max-width: 68.75rem;
+    padding-top: 34.0909091%;
   }
+}
+
+.map__inner iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .overview__item {
@@ -2257,6 +2270,7 @@ ol.blog-detail__lists li {
 @media screen and (min-width: 768px) {
   .overview__map {
     margin-top: 5rem;
+    padding: 0 25px;
   }
 }
 
